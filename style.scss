@@ -1,0 +1,218 @@
+//variables
+
+$secondary-color: #FF3A10;
+$white-color: #ffffff;
+$black-color: #1C1A1A;
+
+//mixins
+@mixin list-null {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// font 
+@font-face {
+    font-family: 'Jost'; /* Имя шрифта */
+    src: url(Jost-300-Light.otf); /* Путь к файлу со шрифтом */
+}
+// font 
+@font-face {
+    font-family: 'Monterchi'; /* Имя шрифта */
+    src: url(Monterchi-Light.ttf); /* Путь к файлу со шрифтом */
+}
+    
+$breakpoint-xs-min: 420px;
+$breakpoint-sm-min: 576px;
+$breakpoint-md-min: 768px;
+$breakpoint-lg-min: 992px;
+$breakpoint-xl-min: 1200px;
+$breakpoint-xxl-min: 1400px;
+
+$breakpoint-xs-max: $breakpoint-xs-min - 1px;
+$breakpoint-s-max: $breakpoint-sm-min - 1px;
+$breakpoint-sm-max: $breakpoint-md-min - 1px;
+$breakpoint-md-max: $breakpoint-lg-min - 1px;
+$breakpoint-lg-max: $breakpoint-xl-min - 1px;
+$breakpoint-xl-max: $breakpoint-xxl-min - 1px;
+// === /Adaptive breakpoints ===
+
+//modules
+@import 'header.scss';
+@import 'catalog.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    font-family: 'Jost';
+}
+.catalog_root {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: $white-color;
+    
+}
+#canvas {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+
+.product {
+    display: flex;
+    justify-content: center;
+    &_wrapper {
+        font-family: 'Jost';
+        padding: 200px 60px 0;
+        height: 100vh; 
+        width: 100%;
+        color: #1C1A1A;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_descr {
+        // max-width: 260px;
+        margin-left: auto;
+        padding-right: 10px;
+        width: 25%;
+        margin-bottom: auto;
+        &-width {
+            margin-left: auto;
+            width: 300px;
+            h3 {
+                font-size: 28px;
+                margin-bottom: 35px;
+                line-height: 89.5%;
+            }
+            .title {
+                margin-bottom: 25px;
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+            .descr {
+                font-size: 16px;
+            }
+        }
+    }
+    &_img {
+        width: 50%;
+        display: flex;
+        padding-top: 100px;
+        .slider_border {
+            width: 1px;
+            height: 400px;
+            background: #1C1A1A;
+        }
+        .img_wrapper {
+            // padding: 10px;
+            .img_mein {
+                width: 100%;
+            }
+        }
+
+        .tab {
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            margin-right: 10px;
+            z-index: 1000;
+            &_i {
+                height: 120px;
+                margin-bottom: 10px;
+                opacity: .5;
+                cursor: pointer;
+                transition: .2s;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &:hover {
+                    opacity: 1;
+                    transition: .2s;
+                }
+            }
+        }
+    }
+    &_buy {
+        padding-left: 10px;
+        width: 30%;
+        margin-bottom: auto;
+
+        .name {
+            font-size: 28px;
+            line-height: 89.5%;
+            width: 70%;
+            margin-bottom: 35px;
+        }
+
+        .code {
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .size_wrapper {
+            margin-bottom: 25px;
+            .title {
+                font-size: 18px;
+                margin-bottom: 25px;
+                &--two {
+                    text-transform: uppercase;
+                    margin-bottom: 40px;
+                }
+            }
+
+            .sizes {
+                display: flex;
+                margin-bottom: 25px;
+                &_item {
+                    display: flex; 
+                    justify-content: center;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    margin-right: 15px;
+                    width: 35px;
+                    border-bottom: 1px solid #1C1A1A;
+                    cursor: pointer;
+                }
+            }
+
+            .btn-wrapper {
+                display: flex;
+
+                button {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    span {
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        margin-right: 16px;
+                    }
+                    div {
+                        width: 60px;
+                        height: 60px;
+                        background: #000;
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+    }
+}
+.br {
+    margin-bottom: 20px;
+}
