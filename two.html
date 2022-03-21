@@ -8,17 +8,84 @@
     <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
-    <header class="header--two">
-        <div class="header_wrapper">
-            <div class="logo">
-                <img class="logo_img" src="logo.svg" alt="logo">
-            </div>
+    <header class="header">
 
-            <div class="nav_icons">
-                <img class="fav" src="favorites.svg" alt="">
-                <img class="cart" src="cart.svg" alt="">
-            </div>
+        <div class="logo">
+            <img src="logo.svg" alt="">
+        </div>
 
+        <nav class="nav">
+            <ul>
+                <li class="prom">
+                    <span>
+                        NEW
+                    </span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>
+                        О бренде
+                    </span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>
+                        Инфо
+                    </span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>
+                        Каталог
+                    </span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>
+                        Доставка
+                    </span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>
+                        Вход
+                    </span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>
+                        Галерея
+                    </span>
+                    <div></div>
+                </li>
+                <li class="prom">
+                    <span>
+                        SALE
+                    </span>
+                    <div></div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="nav_icons">
+            <img class="fav" src="favorites.svg" alt="">
+            <img class="cart" src="cart.svg" alt="">
+        </div>
+        
+        <nav class="navigation">
+            <a href="#" class="navigation__link prom">NEW</a>
+            <a href="#" class="navigation__link">О нас</a>
+            <a href="#" class="navigation__link">Информация</a>
+            <a href="#" class="navigation__link">Каталог</a>
+            <a href="#" class="navigation__link">Доставка</a>
+            <a href="#" class="navigation__link">Контакты</a>
+            <a href="#" class="navigation__link prom">SALE</a>
+        </nav>
+          
+        <div class="hamburger">
+            <span class="hamburger__patty"></span>
+            <span class="hamburger__patty"></span>
+            <span class="hamburger__patty"></span>
         </div>
     </header>
 
@@ -46,6 +113,10 @@
                     </div>
                 </div>
             </div>
+
+
+
+            
             <div class="product_img">
                 <div class="tab pageNav__tabItem">
                     <img class="tab_i" src="one.png" alt="">
@@ -101,11 +172,48 @@
 
                     </div>
                 </div>
+
+                <div class="buy_info">
+                    <div class="info">
+                        <div class="title">
+                            СОСТАВ:
+                        </div>
+                        <div class="descr">
+                            95% полиэстер, 5% эластан. 
+                            Рекомендации по уходу: 
+                            Деликатная стирка, 30 градусов.
+                            <div class="br"></div>
+                            95% полиэстер, 5% эластан. 
+                            Рекомендации по уходу: 
+                            Деликатная стирка, 30 градусов
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
 
-    <script src="item.js"></script>
+    <script>
+        var nav = document.querySelector('.navigation');
+        var toggle = document.querySelector('.hamburger');
+        var navItems = nav.querySelectorAll('.navigation__link');
+
+        toggle.addEventListener('click', toggleNav);
+
+        function toggleNav() {
+        
+            // Show Nav
+            nav.classList.toggle('active');
+            
+            // Transform Hamburger into 'X'
+            toggle.classList.toggle('active');
+            
+            // Show Nav Items
+            for (var i = 0, ii = navItems.length; i < ii; i++) {
+                navItems[i].classList.toggle('active');
+            }
+        }
+    </script>
 </body>
 </html>

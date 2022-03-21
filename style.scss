@@ -22,22 +22,10 @@ $black-color: #1C1A1A;
     src: url(Monterchi-Light.ttf); /* Путь к файлу со шрифтом */
 }
     
-$breakpoint-xs-min: 420px;
-$breakpoint-sm-min: 576px;
-$breakpoint-md-min: 768px;
-$breakpoint-lg-min: 992px;
-$breakpoint-xl-min: 1200px;
-$breakpoint-xxl-min: 1400px;
 
-$breakpoint-xs-max: $breakpoint-xs-min - 1px;
-$breakpoint-s-max: $breakpoint-sm-min - 1px;
-$breakpoint-sm-max: $breakpoint-md-min - 1px;
-$breakpoint-md-max: $breakpoint-lg-min - 1px;
-$breakpoint-lg-max: $breakpoint-xl-min - 1px;
-$breakpoint-xl-max: $breakpoint-xxl-min - 1px;
-// === /Adaptive breakpoints ===
 
 //modules
+@import 'media.scss';
 @import 'header.scss';
 @import 'catalog.scss';
 
@@ -69,32 +57,50 @@ body {
     justify-content: center;
     &_wrapper {
         font-family: 'Jost';
-        padding: 200px 60px 0;
-        height: 100vh; 
+        padding: 120px 60px 0;
         width: 100%;
         color: #1C1A1A;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        @media  (max-width: $breakpoint-xl-min) {
+            padding: 120px 30px 0;
+        }
+        @media  (max-width: $breakpoint-lg-min) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            padding: 100px 30px 0;
+        }
+        
     }
     &_descr {
         // max-width: 260px;
-        margin-left: auto;
+        position: relative;
         padding-right: 10px;
         width: 25%;
-        margin-bottom: auto;
+        margin-bottom: 10%;
+        padding-right: 40px;
+        // margin-right: auto;
+        @media  (max-width: $breakpoint-lg-min) {
+            display: none;
+        }
+
         &-width {
-            margin-left: auto;
-            width: 300px;
+            // margin-left: auto;
+            // width: 300px;
             h3 {
                 font-size: 28px;
                 margin-bottom: 35px;
                 line-height: 89.5%;
+                font-family: 'Monterchi';
             }
             .title {
                 margin-bottom: 25px;
                 text-transform: uppercase;
                 font-size: 18px;
+                
             }
             .descr {
                 font-size: 16px;
@@ -102,9 +108,19 @@ body {
         }
     }
     &_img {
-        width: 50%;
+        width: 45%;
         display: flex;
-        padding-top: 100px;
+        margin-right: auto;
+        @media  (max-width: $breakpoint-lg-min) {
+            width: 100%;
+            margin-bottom: 40px;
+            flex-direction: row-reverse;
+            margin-right: auto;
+            justify-content: flex-end;
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            margin-bottom: 20px;
+        }
         .slider_border {
             width: 1px;
             height: 400px;
@@ -118,17 +134,28 @@ body {
         }
 
         .tab {
+            // display: none;
             display: flex;
             flex-direction: column;
             height: 400px;
             margin-right: 10px;
             z-index: 1000;
+            @media  (max-width: $breakpoint-lg-min) {
+                margin-right: 0;
+                margin-left: 10px;
+            }
+            @media  (max-width: $breakpoint-sm-min) {
+                height: 100%;
+            }
             &_i {
                 height: 120px;
                 margin-bottom: 10px;
                 opacity: .5;
                 cursor: pointer;
                 transition: .2s;
+                @media  (max-width: $breakpoint-sm-min) {
+                    height: 80px;
+                }
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -141,14 +168,34 @@ body {
     }
     &_buy {
         padding-left: 10px;
-        width: 30%;
-        margin-bottom: auto;
-
+        width: 25%;
+        position: fixed;
+        right: 5%;
+        margin-bottom: 10%;
+        @media  (max-width: $breakpoint-xl-min) {
+            margin-bottom: 0;
+        }
+        @media  (max-width: $breakpoint-lg-min) {
+            width: 100%;
+            padding-left: 0;
+            position: static;
+        }
         .name {
             font-size: 28px;
             line-height: 89.5%;
             width: 70%;
             margin-bottom: 35px;
+            font-family: 'Monterchi';
+            @media  (max-width: $breakpoint-xl-min) {
+                width: 100%;
+            }
+            @media  (max-width: $breakpoint-lg-min) {
+                width: 70%;
+                font-size: 24px;
+            }
+            @media  (max-width: $breakpoint-sm-min) {
+                width: 90%;
+            }
         }
 
         .code {
@@ -158,12 +205,18 @@ body {
 
         .size_wrapper {
             margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             .title {
                 font-size: 18px;
                 margin-bottom: 25px;
                 &--two {
                     text-transform: uppercase;
                     margin-bottom: 40px;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        margin-bottom: 25px;
+                    }
                 }
             }
 
@@ -184,7 +237,13 @@ body {
 
             .btn-wrapper {
                 display: flex;
-
+                @media  (max-width: $breakpoint-xl-min) {
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+                @media  (max-width: $breakpoint-lg-min) {
+                    flex-direction: row;
+                }
                 button {
                     background: transparent;
                     border: none;
@@ -192,6 +251,7 @@ body {
                     display: flex;
                     align-items: center;
                     margin-right: 20px;
+                    margin-bottom: 20px;
                     cursor: pointer;
                     span {
                         text-transform: uppercase;
@@ -206,8 +266,22 @@ body {
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        @media  (max-width: $breakpoint-sm-min) {
+                            width: 50px;
+                            height: 50px;
+                        }
                     }
                 }
+            }
+        }
+        .buy_info {
+            display: none;
+            @media  (max-width: $breakpoint-lg-min) {
+                display: block;
+                width: 50%;
+            }
+            @media  (max-width: $breakpoint-sm-min) {
+                width: 100%;
             }
         }
 
@@ -216,3 +290,7 @@ body {
 .br {
     margin-bottom: 20px;
 }
+
+
+
+

@@ -7,76 +7,93 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.min.css">
+    
 </head>
 <body>
     <div class="catalog_root">
         <canvas id="canvas"></canvas>
 
-
-
         <header class="header">
-            <div class="header_wrapper">
-                <div class="logo">
-                    <img class="logo_img" src="logo.svg" alt="logo">
-                </div>
-        
-                <nav class="nav">
-                    <ul>
-                        <li class="prom">
-                            <span>
-                                NEW
-                            </span>
-                            <div></div>
-                        </li>
-                        <li>
-                            <span>
-                                О нас
-                            </span>
-                            <div></div>
-                        </li>
-                        <li>
-                            <span>
-                                Информация
-                            </span>
-                            <div></div>
-                        </li>
-                        <li>
-                            <span>
-                                Каталог
-                            </span>
-                            <div></div>
-                        </li>
-                        <li>
-                            <span>
-                                Доставка
-                            </span>
-                            <div></div>
-                        </li>
-                        <li>
-                            <span>
-                                Контакты
-                            </span>
-                            <div></div>
-                        </li>
-                        <li class="prom">
-                            <span>
-                                SALE
-                            </span>
-                            <div></div>
-                        </li>
-                    </ul>
-                </nav>
 
-
-                <div class="nav_icons">
-                    <img class="fav" src="favorites.svg" alt="">
-                    <img class="cart" src="cart.svg" alt="">
-                </div>
+            <div class="logo">
+                <img src="logo.svg" alt="">
+            </div>
     
+            <nav class="nav">
+                <ul>
+                    <li class="prom">
+                        <span>
+                            NEW
+                        </span>
+                        <div></div>
+                    </li>
+                    <li>
+                        <span>
+                            О бренде
+                        </span>
+                        <div></div>
+                    </li>
+                    <li>
+                        <span>
+                            Инфо
+                        </span>
+                        <div></div>
+                    </li>
+                    <li>
+                        <span>
+                            Каталог
+                        </span>
+                        <div></div>
+                    </li>
+                    <li>
+                        <span>
+                            Доставка
+                        </span>
+                        <div></div>
+                    </li>
+                    <li>
+                        <span>
+                            Вход
+                        </span>
+                        <div></div>
+                    </li>
+                    <li>
+                        <span>
+                            Галерея
+                        </span>
+                        <div></div>
+                    </li>
+                    <li class="prom">
+                        <span>
+                            SALE
+                        </span>
+                        <div></div>
+                    </li>
+                </ul>
+            </nav>
+    
+            <div class="nav_icons">
+                <img class="fav" src="favorites.svg" alt="">
+                <img class="cart" src="cart.svg" alt="">
+            </div>
+            
+            <nav class="navigation">
+                <a href="#" class="navigation__link prom">NEW</a>
+                <a href="#" class="navigation__link">О нас</a>
+                <a href="#" class="navigation__link">Информация</a>
+                <a href="#" class="navigation__link">Каталог</a>
+                <a href="#" class="navigation__link">Доставка</a>
+                <a href="#" class="navigation__link">Контакты</a>
+                <a href="#" class="navigation__link prom">SALE</a>
+            </nav>
+              
+            <div class="hamburger">
+                <span class="hamburger__patty"></span>
+                <span class="hamburger__patty"></span>
+                <span class="hamburger__patty"></span>
             </div>
         </header>
-
-
+        
         <section class="catalog_wrapper">
             <div class="items_wrapper">
                 <div class="item">
@@ -95,7 +112,7 @@
                             4500₽
                         </div>
                         <button class="item_buy-btn">
-                            КУПИТь
+                            в корзину
                         </button>
                     </div>
                 </div>
@@ -115,7 +132,7 @@
                             4500₽
                         </div>
                         <button class="item_buy-btn">
-                            КУПИТь
+                            в корзину
                         </button>
                     </div>
                 </div>
@@ -135,7 +152,7 @@
                             4500₽
                         </div>
                         <button class="item_buy-btn">
-                            КУПИТь
+                            в корзину
                         </button>
                     </div>
                 </div>
@@ -155,7 +172,7 @@
                             4500₽
                         </div>
                         <button class="item_buy-btn">
-                            КУПИТь
+                            в корзину
                         </button>
                     </div>
                 </div>
@@ -163,13 +180,32 @@
         </section>
 
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-       const lis = document.querySelector('li')
+        var nav = document.querySelector('.navigation');
+        var toggle = document.querySelector('.hamburger');
+        var navItems = nav.querySelectorAll('.navigation__link');
 
-       
+        toggle.addEventListener('click', toggleNav);
+
+        function toggleNav() {
+        
+            // Show Nav
+            nav.classList.toggle('active');
+            
+            // Transform Hamburger into 'X'
+            toggle.classList.toggle('active');
+            
+            // Show Nav Items
+            for (var i = 0, ii = navItems.length; i < ii; i++) {
+                navItems[i].classList.toggle('active');
+            }
+        }
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
     <script src="index.js"></script>
 </body>
 </html>
