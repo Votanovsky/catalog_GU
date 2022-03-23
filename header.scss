@@ -59,20 +59,24 @@ $hamburgerSize: 60px;
     ul {
         display: flex;
 
-        li {
+        .li_item {
             @include list-null();
             font-size: 22px;
             text-transform: uppercase;
             margin-left: 30px;
             color: #1C1A1A;
+            cursor: pointer;
             @media  (max-width: $breakpoint-xl-min) {
                 margin-left: 20px;
             }
-            div {
-                height: 1px;
-                width: 100%;
+            .li_line {
+                height: .5px;
+                width: 0%;
                 background: #ff431d;
-                opacity: 0;
+                opacity: 1;
+            }
+            &:hover .li_line{
+                animation: lines .8s;
             }
         }
         .prom {
