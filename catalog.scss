@@ -42,8 +42,8 @@
                 margin-bottom: 25px;
             }
             .favorite {
-                top: 15px;
-                right: 15px;
+                top: 20px;
+                right: 20px;
                 position: absolute;
                 cursor: pointer;
                 transition: .2s;
@@ -54,6 +54,8 @@
                 @media  (max-width: $breakpoint-sm-min) {
                     width: 20px;
                     height: 20px;
+                    top: 15px;
+                    right: 15px;
                 }
             }
             &_img {
@@ -83,24 +85,25 @@
                 &-btn {
                     width: 140px;
                     height: 40px;
-                    background: #ff431d;
-                    border-radius: 10px;
+                    background: #fff;
+                    // border-radius: 10px;
+                    border: 2px solid #ff431d;
                     text-transform: uppercase;
-                    color: #fff;
+                    color: #ff431d;
                     outline:none;
-                    border: none;
+                    // border: none;
                     cursor: pointer;
                     transition: .2s;
                     &:hover {
                         // opacity: .8;
-                        background:darken(#ff431d, 20%);
+                        background: #ff431d;
+                        color: #fff;
                         transition: .2s;
                     }
                     @media  (max-width: $breakpoint-md-min) {
                         font-size: 10px;
                         width: 80px;
                         height: 25px;
-                        border-radius: 6px;
                     }
                 }
             }

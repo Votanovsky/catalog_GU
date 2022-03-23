@@ -71,12 +71,12 @@ $hamburgerSize: 60px;
             div {
                 height: 1px;
                 width: 100%;
-                background: #FF2C00;
+                background: #ff431d;
                 opacity: 0;
             }
         }
         .prom {
-            color: #FF2C00;
+            color: #ff431d;
         }
     }
 
@@ -106,7 +106,7 @@ $hamburgerSize: 60px;
         clip-path: circle(100%);
     }
     .prom {
-        color: #FF2C00;
+        color: #ff431d;
     }
     &__link {
     display: block;
@@ -165,14 +165,17 @@ $hamburgerSize: 60px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 2px;
-        width: 50%;
+        height: 1px;
+        width: 70%;
         background-clip: padding-box;
-        background: darken(#FF2C00, 3);
+        background: darken(#1C1A1A, 3);
         transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
-
+        
         &:nth-child(1) {
             transform: translate(-50%, calc(-50% - 8px));
+        }
+        &:nth-child(2) {
+            width: 60%;
         }
 
         &:last-child {
@@ -183,7 +186,7 @@ $hamburgerSize: 60px;
   &.active {
     
     #{$p}__patty {
-      background: #FF2C00;
+      background: #ff431d;
       
       &:nth-child(1) {
         transform: translate(-50%, -50%) rotate(45deg);
@@ -195,7 +198,7 @@ $hamburgerSize: 60px;
       }
       
       &:nth-child(3) {
-         transform: translate(-50%, -50%) rotate(-45deg);
+        transform: translate(-50%, -50%) rotate(-45deg);
       }
     }
   }

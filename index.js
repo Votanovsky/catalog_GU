@@ -30,7 +30,7 @@ class Particle{
         this.speedX = Math.random()*2-1
         this.speedY = Math.random()*2-1
         // this.color = 'hsl('+ hue +', 120%, 50%)'
-        this.color = 'rgba(242, 0, 0, 0.15)'
+        this.color = 'rgba(242, 45, 0, 0.15)'
 
     }
 
