@@ -29,6 +29,7 @@ $black-color: #1C1A1A;
 @import 'header.scss';
 @import 'catalog.scss';
 @import 'product.scss';
+@import 'mini_catalog.scss';
 
 * {
     margin: 0;
@@ -36,7 +37,7 @@ $black-color: #1C1A1A;
     box-sizing: border-box;
 }
 body {
-    width: 100vw;
+    // width: 100vw;
     font-family: 'Jost';
 }
 .catalog_root {
@@ -60,118 +61,7 @@ body {
 //     overflow: hidden;
 // }
 
-// mini_catalog================
-.mini_catalog {
-    font-family: 'Monterchi';
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    
-}
 
-.mini_catalog-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 50%));
-    width: 100%;
-    // gap: 30px;
-    
-    .item {
-        // padding: 20px;
-        border: 1px solid #000;
-        height: 400px;
-        position: relative;
-        
-        &:nth-child(1) {
-            border-bottom: 1px solid #fff;
-            border-right: 1px solid #fff;
-        }
-        &:nth-child(4) {
-            border-top: 1px solid #fff;
-            border-left: 1px solid #fff;
-        }
-        .overlay {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background: #000;
-            opacity: .3;
-            transform: scale(.9);
-            z-index: 10;
-            transition: .2s;
-        }
-        &:hover .overlay{
-            opacity: 0;
-            transition: .2s;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            transform: scale(.9);
-        }
-        .descr {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            top: 40px;
-            left: 50px;
-            margin-left: auto;
-            width: 90%;
-            text-align: start;
-            z-index: 10;
-            // background: #000;
-            .name {
-                font-size: 24px;
-                text-transform: uppercase;
-                margin-right: 200px;
-                width: 100%;
-                margin-left: auto;
-                color: #fff;
-            }
-            
-        }
-        button {
-            z-index: 10;
-            position: absolute;
-            bottom: 40px;
-            right: 40px;
-            background: transparent;
-            border: none;
-            outline: none;
-            display: flex;
-            align-items: center;
-            // margin-right: 20px;
-            // margin-bottom: 20px;
-            cursor: pointer;
-            span {
-                text-transform: uppercase;
-                font-size: 28px;
-                margin-right: 16px;
-                font-family: 'Monterchi';
-                color: #fff;
-            }
-            div {
-                width: 80px;
-                height: 80px;
-                background: #ff431d;
-                border-radius: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                @media  (max-width: $breakpoint-sm-min) {
-                    width: 50px;
-                    height: 50px;
-                }
-            }
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-
-    }
-}
 
 // ====keyframes
 @keyframes lines {
@@ -183,5 +73,117 @@ body {
     }
     100% {
         width: 0%;
+    }
+}
+
+.about {
+    padding-top: 120px;
+    background: url('media/V2.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    // background: #000;
+    .info {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 100px;
+        @media  (max-width: $breakpoint-lg-min) {
+            flex-direction: column;
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            padding-bottom: 60px;
+        }
+        .img_wrapper {
+            width: 40%;
+            padding: 0 10px 0;
+            @media  (max-width: $breakpoint-lg-min) {
+                margin-bottom: 100px;
+            }
+            @media  (max-width: $breakpoint-xl-min) {
+                width: 50%;
+            }
+            @media  (max-width: $breakpoint-lg-min) {
+                width: 100%;
+                padding: 0 20px 0;
+            }
+            @media  (max-width: $breakpoint-sm-min) {
+                margin-bottom: 60px;
+            }
+            img {
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+                border-radius: 20px;
+                @media  (max-width: $breakpoint-lg-min) {
+                    height: 70vh;
+                }
+            }
+        }
+        .text_wrapper {
+            width: 60%;
+            padding-top: 20px;
+            text-align: end;
+            @media  (max-width: $breakpoint-xl-min) {
+                width: 50%;
+            }
+            @media  (max-width: $breakpoint-lg-min) {
+                width: 100%;
+                text-align: start;
+            }
+            h2 {
+                text-transform: uppercase;
+                font-family: 'Monterchi';
+                font-size: 48px;
+                margin-bottom: 50px;
+                // font-weight: 400;
+                padding: 0 60px 0 60px;
+                color: #ffffff;
+                line-height: 89.5%;
+                opacity: .7;
+                @media  (max-width: $breakpoint-xl-min) {
+                    font-size: 36px;
+                }
+                @media  (max-width: $breakpoint-lg-min) {
+                    padding: 0 20px 0 20px;
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    font-size: 28px;
+                }
+            }
+            div {
+                font-size: 32px;
+                font-family: 'Monterchi';
+                padding: 0 50px 0 20px;
+                text-transform: uppercase;
+                color: #fff;
+                @media  (max-width: $breakpoint-xl-min) {
+                    font-size: 24px;
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    font-size: 18px;
+                }
+                p {
+                    margin-bottom: 30px;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .video_wrapper {
+        width: 100%;
+        height: 100vh;
+        @media  (max-width: $breakpoint-lg-min) {
+            height: 70vh;
+        }
+        
+        padding: 0 20px 30px 20px;
+        video {
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            object-fit: cover;
+        }
     }
 }

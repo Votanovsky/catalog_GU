@@ -119,12 +119,12 @@
             
             <div class="product_img">
                 <div class="tab pageNav__tabItem">
-                    <img class="tab_i" src="media/DSC01644.jpg" alt="">
-                    <img class="tab_i" src="media/DSC01644.jpg" alt="">
-                    <img class="tab_i" src="media/DSC01722.jpg" alt="">
+                    <img onclick="next(this)" class="tab_i" src="media/one.png" alt="">
+                    <img onclick="next(this)" class="tab_i" src="media/DSC01644.jpg" alt="">
+                    <img onclick="next(this)" class="tab_i" src="media/DSC01722.jpg" alt="">
                 </div>
                 <div class="img_wrapper">
-                    <img class="img_mein" src="media/one.png" alt="">
+                    <img id="pic" class="img_mein" src="media/one.png" alt="">
                 </div>
             </div>
             <div class="product_buy">
@@ -225,6 +225,13 @@
             for (var i = 0, ii = navItems.length; i < ii; i++) {
                 navItems[i].classList.toggle('active');
             }
+        }
+
+        // product tabs 
+        function next(image) {
+            var item = document.getElementById('pic')
+            item.src = image.src
+            item.parentElement.style.display="block"
         }
     </script>
 </body>
