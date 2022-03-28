@@ -9,8 +9,8 @@
     height: 100px;
     background: #fff;
     padding: 0 60px;
-    z-index: 10000;
-    border-bottom: 1px solid rgb(27, 27, 27);
+    z-index: 1000;
+    border-bottom: 1px solid #1C1A1A;
     @media  (max-width: $breakpoint-xl-min) {
         padding: 0 20px;
     }
@@ -52,7 +52,7 @@ $hamburgerSize: 60px;
 
 .nav {
     display: flex;
-    font-family: 'Monterchi';
+    font-family: 'Jost';
     @media  (max-width: $breakpoint-lg-min) {
         display: none;
     }
@@ -72,7 +72,7 @@ $hamburgerSize: 60px;
             .li_line {
                 height: .5px;
                 width: 0%;
-                background: #ff431d;
+                background: #F45626;
                 opacity: 1;
             }
             &:hover .li_line{
@@ -80,7 +80,7 @@ $hamburgerSize: 60px;
             }
         }
         .prom {
-            color: #ff431d;
+            color: #F45626;
         }
     }
 
@@ -110,7 +110,7 @@ $hamburgerSize: 60px;
         clip-path: circle(100%);
     }
     .prom {
-        color: #ff431d;
+        color: #F45626;
     }
     &__link {
     display: block;
@@ -190,7 +190,7 @@ $hamburgerSize: 60px;
   &.active {
     
     #{$p}__patty {
-      background: #ff431d;
+      background: #F45626;
       
       &:nth-child(1) {
         transform: translate(-50%, -50%) rotate(45deg);

@@ -14,8 +14,7 @@
 }
    
 body {
-    font-family: Arial, Helvetica, sans-serif; 
-    font-weight: 300;
+   background: rgb(204, 203, 203);
 }
 canvas {
     width: 100%;
