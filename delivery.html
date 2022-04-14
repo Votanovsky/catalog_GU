@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThreeJS Starter</title>
-    <link rel="stylesheet" href="delivery.css">
     <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
@@ -16,60 +15,67 @@
 
         <nav class="nav">
             <ul>
-                <li class="li_item prom">
-                    <span>
+                <!-- <li class="li_item prom">
+                    <h2>
                         NEW
-                    </span>
+                    </h2>
                     <div class="li_line"></div>
-                </li>
+                </li> -->
                 <li class="li_item">
-                    <span>
+                    <h2>
                         О бренде
-                    </span>
+                    </h2>
                     <div class="li_line"></div>
                 </li>
                 <li class="li_item">
-                    <span>
+                    <h2>
                         Инфо
-                    </span>
+                    </h2>
                     <div class="li_line"></div>
                 </li>
                 <li class="li_item">
-                    <span>
+                    <h2>
                         Каталог
-                    </span>
+                    </h2>
                     <div class="li_line"></div>
                 </li>
                 <li class="li_item">
-                    <span>
+                    <h2>
                         Доставка
-                    </span>
+                    </h2>
                     <div class="li_line"></div>
                 </li>
                 <li class="li_item">
-                    <span>
+                    <h2>
                         Вход
-                    </span>
+                    </h2>
                     <div class="li_line"></div>
                 </li>
                 <li class="li_item">
-                    <span>
+                    <h2>
                         Галерея
-                    </span>
+                    </h2>
                     <div class="li_line"></div>
                 </li>
-                <li class="prom li_item">
-                    <span>
+                <!-- <li class="prom li_item">
+                    <h2>
                         SALE
-                    </span>
+                    </h2>
                     <div class="li_line"></div>
-                </li>
+                </li> -->
             </ul>
         </nav>
 
         <div class="nav_icons">
-            <img class="fav" src="media/favorites.svg" alt="">
-            <img class="cart" src="media/cart.svg" alt="">
+            <div>
+                <span class="checkout"></span>
+                <img class="fav" src="media/favorites.svg" alt="">
+            </div>
+            <div>
+                <span class="checkout"></span>
+                <img class="cart" src="media/cart.svg" alt="">
+                <span class="cart_counter">0</span>
+            </div>
         </div>
         
         <nav class="navigation">
@@ -88,6 +94,7 @@
             <span class="hamburger__patty"></span>
         </div>
     </header>
+
     <section class="ship_wrapper">
         <div class="wrapper">
             <canvas class="ribbons"></canvas>

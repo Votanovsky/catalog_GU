@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "media.scss"
+        "scss/media.scss"
     ],
     "names": [],
     "file": "media.min.css"

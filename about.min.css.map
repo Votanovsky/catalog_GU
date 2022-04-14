@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "catalog.scss"
+        "scss/about.scss"
     ],
     "names": [],
-    "file": "catalog.min.css"
+    "file": "about.min.css"
 }

@@ -7,10 +7,11 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="normalize.css">
     
 </head>
 <body>
-    <!-- <header class="header">
+    <header class="header">
 
     <div class="logo">
         <img src="media/logo.svg" alt="">
@@ -84,35 +85,24 @@
         <span class="hamburger__patty"></span>
         <span class="hamburger__patty"></span>
     </div>
-    </header> -->
-
-    <div id="smooth-wrapper">
-        <section id="smooth-content" class="about">
-            <div class="info">
-                <div class="screen_text screen_text--two">
-                    <img class="img" src="media/about2.svg" alt="">
-                </div>
+    </header>
+    <!-- <div class="bg_g">
+        <img src="./media/g.svg" alt="">
+    </div> -->
+    <section class="login">
+        <div class="left_wrap">
+            <div class="left">
+                <a href="#"><div class="reg">Войти</div></a>
+                <a href="#"><div class="reg">Зарегистрироваться</div></a>
+            </div>
     
-                <div class="img_wrapper">
-                    <img class="imgee" src="media/IMG_9984.png" alt="">
-                </div>
-    
-                <div class="screen_text screen_text--two">
-                    <img class="img img--two" src="media/rus.svg" alt="">
-                </div>
-    
-                <div class="text_wrapper">
-                    
-                    <div class="descr">
-                        <p>Бренд белья, сотворенный для самых чувственных ночей.</p>
-    
-                        <p>
-                            Гейша - муза искусства. Она уверена в себе и своей красоте - в таком состоянии она свернет горы. Девушка бренда geisha не боится быть смелой, заметной, сексуальной. 
-                        </p>
-                    </div>
+            <div class="right">
+                <div class="right_wrapper">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Password">
     
                     <button>
-                        <span>Новая коллекция</span>
+                        <span>войти</span>
                         <div>
                             <svg width="28" height="6" viewBox="0 0 28 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <line x1="0.820312" y1="1.34375" x2="26.9949" y2="1.34375" stroke="white"/>
@@ -122,37 +112,13 @@
                     </button>
                 </div>
             </div>
-    
-            <div class="screen_text">
-                <img class="img" src="media/about.svg" alt="">
-                <div class="descr">
-                    Белье, скрытое под одеждой, дает женщине ощущение уверенности. Такая женщина приковывает к себе взгляды и всегда добивается того, чего хочет. А все начинается с любви: к себе, своим желаниям, телу и отражению в зеркале.
-                </div>
-            </div>
-    
-            <div class="video_wrapper">
-                <video src="media/three.mp4" autoplay muted loop></video>
-            </div>
-    
-    
-        </section>
-    </div>
-
-    <script src="menu.js"></script>
+        </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" integrity="sha512-6zTDRWNxo8vI6JZYDCwhrJpg5icK3P4HNnW3czsO5Scb3lAoPDam+/wF3eog4hxcl0h44d0XlIcFkuoSaWHQ2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <div class="video_right">
+            <video src="media/three.mp4" autoplay muted loop></video>
+        </div>
+    </section>
 
-    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=3.10.0"></script>
-    <!-- <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js?r=1116100"></script> -->
-
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger)
-
-       
-
-        
-    </script>
 </body>
 </html>
