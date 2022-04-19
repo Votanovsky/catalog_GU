@@ -99,6 +99,7 @@ body {
 
 .subscribe_wrapper {
     display: flex;
+    background: #fff;
     // align-items: center;
     width: 100%;
     padding: 100px 0 40px;
@@ -188,12 +189,13 @@ body {
 
 
 .root-cont {
-    background: rgb(255, 249, 239);
+    background: #fff;
     height: 100%;
 }
 .popular {
     margin-top: 120px;
     padding: 0 60px 500px;
+    background: #fff;
     &_text {
         display: flex;
         justify-content: space-around;
@@ -227,6 +229,109 @@ body {
             img {
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.home_about {
+    min-height: 150vh;
+    padding: 100px 0 200px;
+    display: flex;
+    position: relative;
+    background: #000;
+    &-title {
+        font-family: "Monterchi";
+        font-size: 64px;
+        position: absolute;
+        transform: translate(220px,40px);
+        text-transform: uppercase;
+        mix-blend-mode: difference;
+        color: #fff;
+        z-index: 10;
+        .tt {
+            transform: translateX(-100px);
+        }
+        .more {
+            font-family: 'Jost';
+            font-size: 36px;
+            margin-left: 300px;
+            margin-top: 10px;
+            text-transform: lowercase;
+            display: flex;
+            align-items: center;
+            
+            cursor: pointer;
+            span {
+                text-transform: uppercase;
+                font-size: 18px;
+                margin-right: 16px;
+                @media  (max-width: $breakpoint-md-min) {
+                    font-size: 12px;
+                }
+            }
+            div {
+                width: 80px;
+                height: 80px;
+                background: #1C1A1A;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media  (max-width: $breakpoint-sm-min) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            
+        }
+    }
+    .circle_under {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        z-index: 15;
+        path {
+            fill: #FF3C00;
+        }
+    }
+    .cicle_bg {
+        position: absolute;
+        // width: 100%;
+        // height: 100%;
+        width: 500px;
+        height: 500px;
+        background: #fff;
+        z-index: 2;
+        clip-path: circle(50% at 50% 50%);
+        
+    }   
+    .img_wrapper {
+        display: flex;
+        z-index: 10;
+        margin-left: auto;
+        .img_one {
+            height: 850px;
+            margin-right: 100px;
+            width: 500px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 120%;
+                object-fit: cover;
+            }
+        }
+        .img_two {
+            height: 430px;
+            width: 270px;
+            margin-top: auto;
+            z-index: 100;
+            overflow: hidden;
+            transform: translate(100px, -50px);
+            img {
+                width: 100%;
+                height: 120%;
                 object-fit: cover;
             }
         }

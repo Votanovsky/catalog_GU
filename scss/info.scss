@@ -1,8 +1,8 @@
 .info {
     &_section {
     padding: 120px 60px 200px;
-    color: #fff;
-    background: #000;
+    color: #000;
+    background: #fff;
     min-height: 100vh;
     position: relative;
         @media  (max-width: $breakpoint-md-min) {
@@ -23,8 +23,9 @@
     
     &_wrapper {
         display: flex;
+        margin-bottom: 200px;
         flex-direction: column;
-        color: #fff;
+        // color: #fff;
         .row {
             display: flex;
             @media  (max-width: $breakpoint-md-min) {
@@ -95,6 +96,7 @@
                     top: -150px;
                     transform: translate(-50%, 150px);
                     background: #fff;
+                    border: 1px solid #000;
                     color: #000;
                     font-size: 18px;
                     min-width: 250px;
@@ -166,7 +168,7 @@
                     width: 60px;
                     height: 60px;
                     border-radius: 100%;
-                    background: #fff;
+                    background: #000;
                     position: relative;
                     @media  (max-width: $breakpoint-xl-min) {
                         width: 40px;
@@ -183,7 +185,7 @@
                     .plus {
                         position: absolute;
                         width: 60%;
-                        background: #000;
+                        background: #fff;
                         height: 2px;
                         left: 20%;
                         top: 50%;
