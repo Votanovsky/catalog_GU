@@ -29,7 +29,7 @@
             font-size: 74px;
             font-family: 'Monterchi';
             margin-bottom: 20px;
-            color: #F45626;
+            color: #FF3C00;
             text-transform: uppercase;
             @media  (max-width: $breakpoint-lg-min) {
                 font-size: 64px;
@@ -39,7 +39,7 @@
             }
         }
         .subtitle {
-            font-family: 'Monterchi';
+            font-family: 'Jost';
             font-weight: 300;
             font-size: 36px;
             margin-bottom: 20px;
@@ -109,7 +109,7 @@
         margin: 0 auto;
         .panel-header {
             font-size: 36px;
-            font-family: 'Monterchi';
+            font-family: 'Jost';
             line-height: 56px;
             background: white;
             cursor: pointer;
@@ -120,7 +120,7 @@
                 font-size: 18px;
             }
             .arrow {
-                margin-top: 20px;
+                margin-top: 10px;
                 float: right;
             }
             .spacer {
@@ -129,14 +129,14 @@
                 width: 0;
                 display: block;
                 top: 54px;
-                background: #F45626;
+                background: #FF3C00;
             }
         }
         .panel-content {
             font-family: 'Jost';
             background: #fff;
             position: relative;
-            border-top: 0px solid #F45626;
+            border-top: 0px solid #FF3C00;
             height: 0;
             .item {
                 display: block;
@@ -146,7 +146,7 @@
                 text-decoration:none;
                 color: #1C1A1A;
                 /* text-indent:25px; */
-                border-bottom:1px solid #F45626;
+                border-bottom:1px solid #FF3C00;
             }
             
         }
