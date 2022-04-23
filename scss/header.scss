@@ -95,13 +95,17 @@ $hamburgerSize: 60px;
         .li_item {
             @include list-null();
             font-size: 18px;
-            text-transform: uppercase;
             margin-left: 30px;
             
             font-weight: 300;
             cursor: pointer;
             @media  (max-width: $breakpoint-xl-min) {
                 margin-left: 20px;
+            }
+            a {
+                color: #000;
+                text-decoration: none;
+                text-transform: uppercase;
             }
             .li_line {
                 height: .5px;
@@ -115,32 +119,6 @@ $hamburgerSize: 60px;
         }
         .catalog {
             position: relative;
-            .sub_menu {
-                padding: 5px 10px;
-                bottom: -140px;
-                left: 40%;
-                transform: translateX(-40%);
-                position: absolute;
-                min-width: 350px;
-                background: rgb(255, 255, 255);
-                display: flex;
-                border-radius: 8px;
-                justify-content: center;
-                opacity: 0;
-                div {
-                    display: flex;
-                    flex-direction: column;
-                    margin-right: 30px;
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                    li {
-                        list-style-type: none;
-                        margin-bottom: 10px;
-                    }
-                }
-                
-            }
         } 
 
         .prom {
@@ -148,6 +126,37 @@ $hamburgerSize: 60px;
         }
     }
 
+    
+}
+
+.sub_menu {
+    padding: 20px 50px;
+    bottom: -200px;
+    left: 40%;
+    transform: translateX(-40%);
+    position: absolute;
+    min-width: 350px;            
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(200px);
+    display: flex;
+    border-radius: 8px;
+    justify-content: center;
+    
+    // opacity: 0;
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 70px;
+        &:last-child {
+            margin-right: 0;
+        }
+        li {
+            list-style-type: none;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            // text-transform: capitalize;
+        }
+    }
     
 }
 
