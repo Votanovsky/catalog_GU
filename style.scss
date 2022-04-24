@@ -207,7 +207,7 @@ body {
 }
 .popular {
     margin-top: 120px;
-    padding: 0 60px 500px;
+    padding: 0 60px 100px;
     background: #fff;
     &_text {
         display: flex;
@@ -441,7 +441,7 @@ body::-webkit-scrollbar-thumb {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 40px;
-        padding: 120px 30px;
+        padding: 120px 30px 20px;
         @media  (max-width: $breakpoint-md-min) {
             gap: 20px;
             padding: 100px 10px;
@@ -732,75 +732,77 @@ body::-webkit-scrollbar-thumb {
     background: #000;
 }
 
-
-//certificate
-
-// .home_certificate {
-//     padding: 60px 0;
-//     .cert {
-//         &_wrapper {
-//             display: flex;
-//             width: 100%;
-//             align-items: center;
-            
-//         }
-//         &_img {
-//             width: 50%;
-//             height: 170vh;
-//             object-fit: cover;
-//         }
-//         &_text {
-//             width: 50%;
-//             color: #fff;
-//             font-size: 36px;
-//             text-align: center;
-//             padding: 0 10px;
-//         }
-//     }
-    
-// }
-
-.sales {
-    min-height: 100vh;
+// ==== certificate
+.cert_home {
+    padding: 20px 30px;
     position: relative;
-    overflow: hidden;
-    .rib_one {
-        transform: rotate(30deg) translateY(200px) translateX(-200px);
+    .cert_wrapper-rotate {
+        font-size: 28px;
+        position: absolute;
+        top: 40%;
+        left: -20px;
+        color: #fff;
+        transform: rotate(-90deg) translateY(-40%);
     }
-    &_ribbon {
-        width: 100%;
+    .cert_wrapper {
+        padding: 20px 250px 80px;
+        background: #1C1A1A;
         display: flex;
-        div {
-            color: #fff;
-            background:rgb(237, 0, 0);
-            font-size: 36px;
-            white-space: nowrap;
-            padding: 10px;
-            animation: ribbons 20s linear infinite;
-            animation-delay: -20s;
-            span {
-                color: #000;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        color: #fff;
+        &-nav {
+            display: flex;
+            align-items: center;
+            .arrows {
+                width: 100px;
+                svg {
+                    width: 30px;
+                    margin-top: 20px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
             }
         }
-        &:nth-child(2) {
-            animation: ribbons2 20s linear infinite;
-            animation-delay: -20s;
+        &-more {
+            text-transform: uppercase;
+            font-size: 18px;
+            margin-top: 40px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            div {
+                width: 100%;
+                height: 1px;
+                background: #fff;
+            }
+            a {
+                color: #fff;
+                text-decoration: underline;
+                &:hover {
+                    opacity: .5;
+                }
+            }
         }
-    }
-}
-@keyframes ribbons {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-@keyframes ribbons2 {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-200%);
+        &-text {
+            font-size: 28px;
+            margin-left: auto;
+            margin-bottom: 10px;
+            &--two {
+                margin-left: 0;
+                margin-right: auto;
+                margin-top: 20px;
+                
+            }
+        }
+        img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
     }
 }
