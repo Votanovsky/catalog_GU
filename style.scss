@@ -1081,7 +1081,7 @@ body::-webkit-scrollbar-thumb {
 // personal ================
 .personal {
     padding: 120px 30px 60px;
-    @media  (max-width: $breakpoint-md-min) {
+    @media  (max-width: 768px) {
         padding: 100px 10px 60px;
     }
     &_user {
@@ -1090,7 +1090,7 @@ body::-webkit-scrollbar-thumb {
         display: block;
         margin: 0 auto;
         margin-bottom: 80px;
-        @media  (max-width: $breakpoint-md-min) {
+        @media  (max-width: 768px) {
             margin-bottom: 40px; 
             width: 70px;
             height: 70px;
@@ -1103,7 +1103,7 @@ body::-webkit-scrollbar-thumb {
             margin-bottom: 15px;
             font-size: 24px;
         }
-        @media  (max-width: $breakpoint-md-min) {
+        @media  (max-width: 768px) {
             padding: 0 10px;
         }
         .sizes {
@@ -1128,7 +1128,7 @@ body::-webkit-scrollbar-thumb {
                 opacity: .9;
                 transition: .2s;
             }
-            @media  (max-width: $breakpoint-md-min) {
+            @media  (max-width: 768px) {
                 width: 255px;
                 height: 59px;
                 font-size: 16px;
@@ -1144,7 +1144,7 @@ body::-webkit-scrollbar-thumb {
         color: #fff;
         padding: 5px 10px;
         border-radius: 8px;
-        @media  (max-width: $breakpoint-md-min) {
+        @media  (max-width: 768px) {
             font-size: 24px;
         }
     }
@@ -1173,7 +1173,7 @@ body::-webkit-scrollbar-thumb {
             border-radius: 8px;
             overflow: hidden;
             margin-bottom: 40px;
-            @media  (max-width: $breakpoint-md-min) {
+            @media  (max-width: 768px) {
                 width: auto;
                 height: 320px;
             }
@@ -1190,7 +1190,7 @@ body::-webkit-scrollbar-thumb {
             padding-bottom: 5px;
             width: 500px;
             border-bottom: 1px solid #000;
-            @media  (max-width: $breakpoint-md-min) {
+            @media  (max-width: 768px) {
                 width: 100%;
                 flex-direction: column;
             }
@@ -1199,7 +1199,7 @@ body::-webkit-scrollbar-thumb {
                 padding: 30px;
                 border-radius: 8px;
                 margin-bottom: 100px;
-                @media  (max-width: $breakpoint-md-min) {
+                @media  (max-width: 768px) {
                     padding: 30px 5px;
                 }
             }

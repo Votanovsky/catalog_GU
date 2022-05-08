@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+
+    <style>
+        input {
+            margin: 0;
+            padding: 0;
+        }
+        .order_wrapper {
+            background: url('media/bg_logo3.png') 50% 50% no-repeat;
+            background-size: cover;
+            padding: 120px 60px;
+            color: #a78776;
+            display: flex;
+        }
+        .order {
+            padding: 0 20px;
+            padding: 50px 60px 10px;
+            width: 50%;
+        }
+        .oder_wrapper-title {
+            font-size: 24px;
+            padding-bottom: 3px;
+            display: inline-block;
+            font-weight: 300;
+            width: 300px;
+            margin-bottom: 30px;
+            width: 25%;
+        }
+        .oder_wrapper-title__title {
+            border-bottom: 1px solid #a78776;
+            height: 50px;
+            margin-bottom: 20px;
+            width: 300px;
+        }
+        .oder_wrapper-title__img {
+            height: 400px;
+            width: 300px;
+        }
+        .oder_wrapper-title__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            opacity: .9;
+        }
+        .oder_wrapper-product {
+            font-size: 18px;
+            
+            padding: 10px 0;
+            border-top: 1px solid #D31217;;
+            border-bottom: 1px solid #D31217;
+            display: flex;
+            margin-bottom: 40px;
+            /* display: none; */
+        }
+        .oder_wrapper-product__name {
+            margin-bottom: 15px;
+        }
+        .oder_wrapper-product__img {
+            height: 180px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .oder_wrapper-product__price {
+            margin-left: 80px;
+        }
+        .oder_wrapper-total {
+            font-size: 22px;
+            margin-bottom: 40px;
+            width: 25%;
+            margin-right: auto;
+            margin-top: 70px;
+        }
+        .oder_wrapper-total__text--two {
+            display: none;
+        }
+        .oder_wrapper-total__text {
+            top: 120px;
+            position: sticky;
+            width: 300px;
+        }
+        .oder_wrapper-total__text div {
+            margin-bottom: 20px;
+        }
+        .oder_wrapper-total__text div:last-child {
+            border-bottom: 1px solid #edddd6;
+        }
+        .oder_wrapper-total__text button {
+            width: 100%;
+            font-size: 18px;
+            background: #a78776;
+            color: #fff;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            transition: .2s;
+        }
+        .oder_wrapper-total__text button:hover {
+            background: #866c5e;
+        }
+        #order_form {
+            display: flex;
+            flex-direction: column;
+            /* width: 400px; */
+        }
+        .order_form-title {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .input_order {
+            display: block;
+            border: none;
+            font-size: 14px;
+            margin-bottom: 25px;
+            border: 1px solid #edddd6;
+            border-radius: 4px;
+            padding: 12px 10px;
+            outline: none;
+            background: #fff;
+            color: #1C1A1A;
+            width: 100%;
+        }
+        .label_order {
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 5px;
+            padding-bottom: 5px;
+        }
+        .order_delivery {
+            padding-top: 20px;
+        }
+        .order_delivery-title {
+            font-size: 22px;
+
+        }
+        .order_delivery-choise {
+            padding-top: 30px;
+            width: 60%;
+        }
+        .order_delivery-choise div {
+            margin-bottom: 40px;
+
+        }
+        .form_adres_fifty {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .input_order--fifty {
+            width: 90%;
+        }
+
+        .ship {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .ship_choise {
+            margin-top: 20px;
+        }
+        /* input_delivery ==================*/
+        .control-group label {
+            padding-left: 48px;
+            padding-top: 1px;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .control-group label::before,
+        .control-group label::after {
+            position: absolute;
+        }
+
+        .control-group label::before {
+            border: 2px solid #a78776;
+            border-radius: 100%;
+            box-sizing: border-box;
+            content: "";
+            display: block;
+            height: 25px;
+            width: 25px;
+            top: -2px;
+        }
+
+        .control-group label::after {
+            border: 2px solid #fff;
+            border-radius: 100%;
+            box-sizing: border-box;
+            content: "";
+            display: block;
+            height: 15px;
+            width: 15px;
+            top: 3px;
+            left: 5px;
+        }
+
+        .control-group label.blue::after {
+            background: #a78776;
+        }
+
+        input[type="radio"] {
+            opacity: 0;
+            position: absolute;
+        }
+
+        input[type="radio"] + label::after {
+            content: none;
+        }
+
+        input[type="radio"]:checked + label::after {
+            content: "";
+        }
+
+        input[type="radio"]:checked + label.blue::before {
+            border-color: #a78776;
+        }
+
+        input[type="radio"]:checked + label.jiggle::before {
+            animation-name: jiggle;
+            animation-duration: 700ms;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+
+        input[type="radio"]:checked + label.jiggle::after {
+            animation-name: innerJiggle;
+            animation-duration: 700ms;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+
+        input[type="radio"]:active + label::before {
+            animation-name: compress;
+            animation-duration: 700ms;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+
+        /* animations================== */
+
+        @keyframes jiggle {
+        0% {
+            transform: scale(0.8, 0.8);
+        }
+
+        30% {
+            transform: scale(0.75, 1.15);
+        }
+
+        50% {
+            transform: scale(1.12, 0.75);
+        }
+
+        60% {
+            transform: scale(0.9, 1.12);
+        }
+
+        70% {
+            transform: scale(1.05, 0.95);
+        }
+
+        80% {
+            transform: scale(0.85, 1.05);
+        }
+
+        90% {
+            transform: scale(1.02, 0.98);
+        }
+
+        95% {
+            transform: scale(0.98, 1.02);
+        }
+
+        98% {
+            transform: scale(1.01, 0.99);
+        }
+
+        100% {
+            transform: scale(1, 1);
+        }
+        }
+
+        @keyframes innerJiggle {
+        0% {
+            transform: scale(0.8, 0.8);
+        }
+
+        30% {
+            transform: scale(0.75, 1.15);
+        }
+
+        50% {
+            transform: scale(1.12, 0.75);
+        }
+
+        60% {
+            transform: scale(0.9, 1.12);
+        }
+
+        70% {
+            transform: scale(1.05, 0.95);
+        }
+
+        80% {
+            transform: scale(0.85, 1.05);
+        }
+
+        90% {
+            transform: scale(1.02, 0.98);
+        }
+
+        95% {
+            transform: scale(0.98, 1.02);
+        }
+
+        98% {
+            transform: scale(1.01, 0.99);
+        }
+
+        100% {
+            transform: scale(1, 1);
+        }
+        }
+
+        @keyframes compress {
+        0% {
+            transform: scale(1, 1);
+        }
+
+        100% {
+            transform: scale(0.8, 0.8);
+        }
+        }
+        /* animations================== */
+
+
+
+
+        /* media================== */
+        @media  (max-width: 1200px) {
+            .order_wrapper {
+                padding: 120px 20px 60px;
+            }
+
+            .order {
+                padding: 50px 80px 10px;
+                width: 50%;
+            }
+
+            .oder_wrapper-title {
+                width: 20%;
+            }
+            .oder_wrapper-title__title {
+                width: 200px;
+            }
+            .oder_wrapper-title__img {
+                height: 300px;
+                width: 200px;
+            }
+            .oder_wrapper-title__title {
+                height: auto;
+                width: 200px;
+            }
+            .oder_wrapper-title__title--two {
+                display: none;
+                font-size: 24px;
+                width: 100%;
+            }
+            .oder_wrapper-title__img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+                opacity: .9;
+            }
+            .oder_wrapper-total {
+                width: 20%;
+            }
+            .oder_wrapper-total__text {
+                top: 120px;
+                position: sticky;
+                width: 250px;
+            }
+        }
+        @media  (max-width: 991px) {
+            .order_wrapper {
+                padding: 80px 20px 60px;
+            }
+            .order {
+                padding: 50px 10px 10px;
+                width: 50%;
+            }
+            .oder_wrapper-total {
+                width: 40%;
+                margin-left: auto;
+                margin-right: 0;
+                margin-top: 120px;
+            }
+            .oder_wrapper-title__title--two {
+                display: block;
+            }
+            .oder_wrapper-title {
+                display: none;
+            }
+        }
+        @media  (max-width: 700px) {
+            .oder_wrapper-total {
+                display: none;
+            }
+            .oder_wrapper-total__text--two {
+                display: block;
+                position: static;
+                margin-top: 40px;
+            }
+            .order {
+                width: 100%;
+            }
+        }
+        /* media================== */
+        
+    </style>
+    
+            
+    <div class="order_wrapper">
+        <div class="oder_wrapper-title">
+            <div class="oder_wrapper-title__title">Оформление заказа</div>
+            <div class="oder_wrapper-title__img">
+                <img src="media/order.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="order">
+            <form id="order_form" action="">
+                <div class="oder_wrapper-title__title oder_wrapper-title__title--two">Оформление заказа</div>
+                <div class="order_form-title">
+                    Контактные данные:
+                </div>
+
+                <label class="label_order" for="order_name">Имя</label>
+                <input class="input_order" id="order_name" type="text" placeholder="">
+    
+                <label class="label_order" for="order_lastname">Фамилия</label>
+                <input class="input_order" id="order_lastname" type="text" placeholder="">
+    
+                <label class="label_order" for="order_email">E-mail</label>
+                <input class="input_order" id="order_email" type="email" placeholder="">
+                
+                <label class="label_order" for="order_phone">Телефон</label>
+                <input class="input_order" id="order_phone" type="tel" placeholder="">
+
+
+                <div class="order_form-title">
+                    Адрес:
+                </div>
+
+                <label class="label_order" for="adres_country">Страна</label>
+                <input class="input_order" id="adres_country" type="text" placeholder="">
+                
+                <label class="label_order" for="adres_city">Город</label>
+                <input class="input_order" id="adres_city" type="text" placeholder="">
+                
+                <label class="label_order" for="adres_st">Улица</label>
+                <input class="input_order" id="adres_st" type="text" placeholder="">
+    
+                <div class="form_adres_fifty">
+                    <span>
+                        <label class="label_order" for="adres_house">Дом</label>
+                        <input class="input_order input_order--fifty" id="adres_house" type="text" placeholder="">
+                    </span>
+    
+                    <span>
+                        <label class="label_order" for="adres_flat">Квартира/Офис</label>
+                    <input class="input_order input_order--fifty" id="adres_flat" type="text" placeholder="">
+                    </span>
+                </div>
+    
+                <label class="label_order" for="adres_st">Есть сертификат?</label>
+                <input class="input_order" id="adres_st" type="text" placeholder="Введите ваш промокод">
+
+
+
+
+                <div class="order_form-title">
+                    Способ оплаты:
+
+                    <div class="ship">
+                        <div>СДЭК</div>
+
+                        <div class="ship_choise">
+                            <div class="control-group">
+                                <input id="option-1" type="radio" name="breed-option" value="teacup" checked />
+                                <label id="option-1-label" for="option-1" class="jiggle-label blue">
+                                    СДЭК курьером - <span>175 ₽</span>
+                                </label>
+                              </div>
+                            
+                              <div class="control-group">
+                                <input id="option-2" type="radio" name="breed-option" value="longcoat" />
+                                <label id="option-2-label" for="option-2" class="jiggle-label blue">
+                                    СДЭК поставтомат - <span>100 ₽</span>
+                                </label>
+                              </div>
+                            
+                              <div class="control-group">
+                                <input id="option-3" type="radio" name="breed-option" value="applehead" />
+                                <label id="option-3-label" for="option-3" class="jiggle-label blue">
+                                    СДЭК вертолётом - <span>4000 ₽</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="oder_wrapper-total__text oder_wrapper-total__text--two">
+                    <div>Стоимость товара:   <span>200 ₽</span></div>
+    
+                    <div>Доставка:   <span>200 ₽</span></div>
+    
+                    <div>Сумма заказа:   <span>400 ₽</span></div>
+    
+                    <button>Оформить заказ</button>
+                </div>
+            </form>
+        </div>
+    
+        <div class="oder_wrapper-total">
+            <div class="oder_wrapper-total__text">
+                <div>Стоимость товара:   <span>200 ₽</span></div>
+
+                <div>Доставка:   <span>200 ₽</span></div>
+
+                <div>Сумма заказа:   <span>400 ₽</span></div>
+
+                <button>Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        const controls = document.querySelectorAll(".jiggle-label");
+
+        function jiggle(e) {
+        e.target.classList.add("jiggle");
+        setTimeout(resetJiggle, 700, e.target);
+        }
+
+        function resetJiggle(element) {
+        element.classList.remove("jiggle");
+        }
+
+        controls.forEach((control) => {
+        control.addEventListener("touchend", jiggle, false);
+        control.addEventListener("mouseup", jiggle, false);
+        });
+
+    </script>
+</body>
+</html>

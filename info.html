@@ -196,17 +196,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <span class="title">Размерная сетка</span>
-                    <div class="circle">
-                        <span class="plus"></span>
-                        <span class="plus plus--two"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="item">
-                    <span class="title">сертификат соответсвия</span>
+                    <span class="title">сертификат</span>
                     <div class="circle">
                         <span class="plus"></span>
                         <span class="plus plus--two"></span>
@@ -217,17 +207,106 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="item">
+                    <span class="title">Таблицы размеров:</span>
+                </div>
+            </div>
+
+            <div class="sizes_wrapper">
+                <div class="sizes_img">
+                    <div class="sizes_name">
+                        Пояса и юбки, трусы, боди и платья,
+                        пояса, корсеты;
+                        Красный топ Bando с вышивкой, Бюстгальтер розовый с мягкой чашкой
+                    </div>
+                    <div class="sizes_img-wrapper">
+                        <img src="media/поса юбки редизайн2.svg" alt="">
+                    </div>
+                </div>
+                <div class="sizes_img">
+                    <div class="sizes_name">
+                        Бюстгальтеры
+                    </div>
+                    <div class="sizes_img-wrapper">
+                        <img src="media/бюстгальтерыт редизайн2.svg" alt="">
+                    </div>
+                </div>
+                
+                
+            </div>
         </div>
 
-        <div style="font-size: 24px;">
-            Тут должно быть видео и описание, как делать замеры для заказа белья
-        </div>
-        <div class="video_wrapper">
-            <video src="media/three.mp4" autoplay muted loop></video>
-        </div>
+        
+        
     </section>
 
+    <style>
+        .sizes_wrapper {
+            display: flex;
+            flex-direction: row;
+            /* justify-content: flex-end; */
+            align-items: flex-end;
+            width: 100%;
+        }
+        .sizes_img {
+            width: 100%;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            /* align-items: flex-start; */
+        }
+        .sizes_img-wrapper {
+            width: 95%;
+        }
+        .sizes_name {
+            font-size: 28px;
+            margin-bottom: 10px;
+            width: 95%;
+            
+        }
+        .sizes_img img {
+            width: 100%;
+            border: 1px solid #000;
+            /* border: 1px solid #000; */
+            /* border-radius: 8px; */
+        }
 
+        @media (max-width: 1200px) {
+            .sizes_name {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 991px) {
+            .sizes_name {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 768px) {
+            .sizes_wrapper {
+                flex-direction: column;
+            }
+            .sizes_img {
+                margin-bottom: 20px;
+            }
+            .sizes_img-wrapper {
+                width: 85%;
+            }
+            .sizes_name {
+                width: 85%;
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 576px) {
+            .sizes_img-wrapper {
+                width: 100%;
+            }
+            .sizes_name {
+                width: 100%;
+            }
+        }
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="menu.js"></script>
 
