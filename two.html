@@ -243,34 +243,192 @@
         </div>
     </section>
 
+    <div class="sizes_overlay">
+        <div class="sizes_modal">
+            <div class="btn_close">
+                X
+            </div>
+            <div class="sizes_title">Подбор размера</div>
+            <div class="sizes_subtitle">Укажите ваши данные для определения размера</div>
 
-    <script>
-        var nav = document.querySelector('.navigation');
-        var toggle = document.querySelector('.hamburger');
-        var navItems = nav.querySelectorAll('.navigation__link');
+            <div class="sizes_select">
+                <div class="sizes_select-title">Тип товара</div>
 
-        toggle.addEventListener('click', toggleNav);
+                <button class="sizes_btn-drop">Выбрать</button>
+                <ul class="sizes_btn-selected">
+                    <li>Бюстгалтеры</li>
+                    <li>Корсеты</li>
+                    <li>Трусы</li>
+                    <li>Боди и платья</li>
+                    <li>Пояса и юкбки</li>
+                </ul>
 
-        function toggleNav() {
+                <div class="in_wrapper">
+                    <input class="input_sizes" type="text" placeholder="Обхват груди (см.)">
+                    <input class="input_sizes" type="text" placeholder="Обхват под грудью (см.)">
+                    <input class="input_sizes" type="text" placeholder="Обхват бёдер (см.)">
+                    <input class="input_sizes" type="text" placeholder="Обхват талии (см.)">
+                </div>
+            </div>
+
+            <div class="sizes_total">Ваш размер:  <span>L</span></div>
+        </div>
+    </div>
+
+    <style>
         
-            // Show Nav
-            nav.classList.toggle('active');
-            
-            // Transform Hamburger into 'X'
-            toggle.classList.toggle('active');
-            
-            // Show Nav Items
-            for (var i = 0, ii = navItems.length; i < ii; i++) {
-                navItems[i].classList.toggle('active');
+        input {
+            padding: 0;
+            margin: 0;
+        }
+        .sizes_overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .2);
+            backdrop-filter: blur(1px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 20000;
+            /* padding: 20px 0; */
+        }
+        
+        .sizes_modal {
+            position: relative;
+            padding: 20px 0;
+            font-size: 16px;
+            color: #a78776;
+            height: 95vh;
+            width: 500px;
+            background: rgb(255, 253, 253);
+            /* border: 1px solid #000; */
+            border-radius: 4px;
+            text-align: center;
+        }
+        .btn_close {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .sizes_title {
+            padding: 0 20px;
+            font-weight: bold;
+            /* margin-bottom: 10px; */
+            display: inline-block;
+            /* border-bottom: 1px solid #a78776; */
+        }
+        .sizes_total {
+            margin-top: 40px;
+            font-size: 24px;
+            padding: 0 20px;
+            font-weight: bold;
+            /* margin-bottom: 10px; */
+            display: inline-block;
+            /* border-bottom: 1px solid #a78776; */
+        }
+        .sizes_subtitle {
+            padding: 0 20px;
+            margin-bottom: 20px;
+            /* width: 100%; */
+            border-bottom: 1px solid #a78776;
+        }
+        .sizes_select-title {
+            padding: 0 20px;
+        }
+        .sizes_btn-drop {
+            margin: 20px 20px 0;
+            background: #a78776;
+            outline: none;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            width: 40%;
+            /* margin-top: 20px; */
+            height: 40px;
+            cursor: pointer;
+            transition: .2s;
+        }
+        .sizes_btn-drop:hover {
+            background: #866c5e;
+        }
+        .sizes_btn-selected  {
+            padding:0  20px;
+            padding-top: 5px;
+            display: flex;
+            margin-bottom: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sizes_btn-selected li {
+            list-style-type: none;
+            /* display: inline; */
+            margin-bottom: 5px;
+            width: 30%;
+            border-bottom: 1px solid #a78776;
+            cursor: pointer;
+            transition: .1s;
+            text-align: center;
+        }
+        .sizes_btn-selected li:hover {
+            background: #a78776;
+            color: #fff;
+        }
+        .in_wrapper {
+            background: #a78776;
+            padding: 10px 20px;   
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .input_sizes {
+            display: block;
+            border: none;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            padding: 7px 5px;
+            outline: none;
+            background: #a78776;
+            color: rgba(255, 255, 255, 0.7);
+            width: 50%;
+        }
+        input[type="text"]::-moz-placeholder { color: rgba(255, 255, 255, 0.7);; }
+        input[type="text"]::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.7);; }
+        input[type="text"]:-ms-input-placeholder { color: rgba(255, 255, 255, 0.7);; }
+        input[type="text"]::-ms-input-placeholder { color: rgba(255, 255, 255, 0.7);; }
+        input[type="text"]::placeholder { color: rgba(255, 255, 255, 0.7);; } 
+
+
+        @media  (max-width: 768px) {
+            .sizes_modal {
+                width: 420px;
+                height: 80vh;
             }
         }
 
-        // product tabs 
-        function next(image) {
-            var item = document.getElementById('pic')
-            item.src = image.src
-            item.parentElement.style.display="block"
+        @media  (max-width: 576px) {
+            .sizes_modal {
+                width: 320px;
+                height: 75vh;
+            }
+            .sizes_btn-drop {
+                width: 70%;
+            }
+            .sizes_btn-selected li {
+                width: 70%;
+            }
+            .input_sizes {
+                width: 70%;
+            }
         }
-    </script>
+    </style>
 </body>
 </html>
