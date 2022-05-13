@@ -15,11 +15,11 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: var(--color-dark);
 }
 .title {
     text-transform: uppercase;
     text-align: center;
-    color: #fff;
     position: fixed;
     left: 50%;
     top: 50%;
