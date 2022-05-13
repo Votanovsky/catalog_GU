@@ -9,14 +9,29 @@
     <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
+    gsap.to(stops[0], {
+        stopColor: 'hsla(22, 99%, 49%, 100%)',
+        scrollTrigger: {
+            start: 0,
+            scrub: 1,
+            end: "max"
+        },
+    })
+    gsap.to(stops[1], {
+        stopColor: 'hsla(2, 99%, 29%, 100%)',
+        scrollTrigger: {
+            start: 0,
+            scrub: 1,
+            end: "max"
+        },
     <header class="header header--main">
 
         <div class="logo">
             <svg width="362" height="128" viewBox="0 0 181 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" stop-color="hsla(4, 100%, 50%, 100%)"/>
-                        <stop offset="100%" stop-color="hsla(54, 89%, 62%, 92%)"/>
+                        <stop offset="0%" stop-color="hsla(22, 99%, 49%, 100%)"/>
+                        <stop offset="100%" stop-color="hsla(2, 99%, 29%, 100%)"/>
                     </linearGradient>
                 </defs>
                 <path d="M125.16 2.37872C119.699 5.44907 119.335 6.83804 118.899 25.9911C118.534 41.3429 118.389 43.0973 117.151 44.4863L115.768 46.0215H120.719C125.597 46.0215 125.67 46.0215 124.432 44.6325C123.267 43.3898 123.122 42.0008 123.413 34.1787C123.631 26.576 123.923 24.6753 125.306 22.0436C128.291 16.3415 135.354 15.2449 139.723 19.7773C141.834 21.9704 141.834 21.9704 142.199 33.8132L142.563 45.656L145.766 45.8753C148.897 46.0946 148.897 46.0946 147.732 44.4132C146.931 43.3167 146.567 41.1236 146.567 37.2491C146.494 34.2518 146.203 29.3539 145.912 26.4298C145.402 22.0436 144.893 20.6546 143.218 18.9001C142.126 17.7304 140.16 16.5608 138.776 16.3415C137.466 16.1222 136.374 15.7567 136.374 15.6104C136.374 15.4642 137.174 14.587 138.194 13.5636C139.504 12.2477 140.014 10.9318 140.014 8.95803C139.941 2.23252 131.786 -1.42265 125.16 2.37872ZM135.718 4.57183C140.669 7.86148 138.922 13.4904 132.442 15.318C128.437 16.4146 125.67 18.2422 123.85 20.8739L122.466 22.9939L122.685 15.6836C122.976 7.56907 123.85 5.44907 127.272 3.9139C130.476 2.52493 132.951 2.67114 135.718 4.57183Z" fill="url(#Gradient)"/>
@@ -153,7 +168,7 @@
             <div class="new_collection-title">New Collection</div>
 
             <div class="new_collection-img">
-                <img class="img " src="media/new_one.jpg" alt="">
+                <img class="img " src="media/lele.JPG" alt="">
             </div>
             <div class="new_collection-img">
                 <img class="img " src="media/new_two.jpg" alt="">
@@ -192,7 +207,7 @@
                     <div>new</div>
                     <span>Бюстгалтер из чёрной сетки на каркасе с принтом ZEBRA</span>
                 </div>
-                <img class="img " src="media/12.png" alt="">
+                <img class="img " src="media/keke.jpg" alt="">
 
                 <div class="darken"></div>
             </div>
@@ -201,7 +216,7 @@
                     <div>new</div>
                     <span>Бюстгалтер чёрный со стрепами</span>
                 </div>
-                <img class="img " src="media/new_one.jpg" alt="">
+                <img class="img " src="media/tete 1.jpg" alt="">
 
                 <div class="darken"></div>
             </div>
@@ -210,7 +225,7 @@
                     <div>new</div>
                     <span>Бюстгалтер чёрный со стрепами</span>
                 </div>
-                <img class="img " src="media/new_one.jpg" alt="">
+                <img class="img " src="media/jeje.jpg" alt="">
 
                 <div class="darken"></div>
             </div>
@@ -367,7 +382,7 @@
             window.addEventListener('load', () => {
                 const stops = [...document.querySelector('#Gradient').children]
                 gsap.to(stops[0], {
-                    stopColor: 'hsla(54, 89%, 62%, 92%)',
+                    stopColor: 'hsla(19, 99%, 45%, 100%)',
                     scrollTrigger: {
                         start: 0,
                         scrub: 1,
@@ -375,7 +390,7 @@
                     },
                 })
                 gsap.to(stops[1], {
-                    stopColor: 'hsla(4, 100%, 50%, 100%)',
+                    stopColor: 'hsla(2, 99%, 29%, 100%)',
                     scrollTrigger: {
                         start: 0,
                         scrub: 1,

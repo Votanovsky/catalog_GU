@@ -20,7 +20,7 @@
         .item {
             display: flex;
             flex-direction: column;
-            width: 400px;
+            width: 360px;
             margin-bottom: 100px;
             position: relative;
             background: #fff;
@@ -30,7 +30,7 @@
                 width: 300px;
             }
             @media  (max-width: $breakpoint-md-min) {
-                width: 200px;
+                width: 240px;
                 margin-bottom: 40px;
             }
             @media  (max-width: $breakpoint-sm-min) {
@@ -48,38 +48,59 @@
                 cursor: pointer;
                 transition: .2s;
                 &:hover {
-                    transform: scale(1.15);
+                    transform: scale(1.1);
                     transition: .2s;
                 }
                 @media  (max-width: $breakpoint-sm-min) {
-                    width: 20px;
-                    height: 20px;
+                    width: 15px;
+                    height: 15px;
                     top: 15px;
                     right: 15px;
                 }
             }
             &_img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
+                height: 500px;
                 margin-bottom: 15px;
+                @media  (max-width: $breakpoint-lg-min) {
+                    height: 400px;
+                }
+                @media  (max-width: $breakpoint-md-min) {
+                    height: 370px;
+                    margin-bottom: 5px;
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    height: 290px;
+                }
+                @media  (max-width: $breakpoint-xs-min) {
+                    height: 240px;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    @media  (max-width: $breakpoint-md-min) {
+                        border-radius: 4px;
+                    }
+                }
                 // border-radius: 10px;
             }
             &_name {
                 
-                font-size: 20px;
+                font-size: 16px;
                 margin-bottom: 10px;
                 @media  (max-width: $breakpoint-md-min) {
-                    font-size: 14px;
+                    font-size: 12px;
+                    margin-bottom: 5px;
                 }
             }
             &_buy {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                font-size: 20px;
+                font-size: 16px;
                 @media  (max-width: $breakpoint-md-min) {
-                    font-size: 14px;
+                    font-size: 12px;
                 }
 
                 &-btn {

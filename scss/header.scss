@@ -4,15 +4,15 @@
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 80px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(120px);
     padding: 0 60px;
     z-index: 2000;
     color: #000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.911);
+    border-bottom: 1px solid rgba(233, 232, 232, 0.15);
     @media  (max-width: $breakpoint-xl-min) {
         padding: 0 20px;
     }
@@ -21,16 +21,16 @@
     }
     @media  (max-width: $breakpoint-md-min) {
         padding: 0 100px 0 20px;
-        height: 80px;
+        height: 70px;
     }
     @media  (max-width: $breakpoint-sm-min) {
         padding: 0 80px 0 20px;
     }
     .logo {
         z-index: 1000;
-        width: 160px;
-        @media  (max-width: $breakpoint-sm-min) {
-            width: 140px;
+        width: 140px;
+        @media  (max-width: $breakpoint-lg-min) {
+            width: 120px;
         }
         svg {
             width: 100%;
@@ -39,9 +39,11 @@
 
     .nav_icons {
         display: flex;
-        width: 160px;
+        margin-left: 50px;
+        // width: 160px;
         @media  (max-width: $breakpoint-lg-min) {
             width: auto;
+            margin-left: auto;
         }
 
         
@@ -52,8 +54,8 @@
                 left: -7px;
                 top: -2px;
                 position: absolute;
-                width: 5px;
-                height: 5px;
+                width: 7px;
+                height: 7px;
                 background: #FF3C00;
                 border-radius: 100%;
             }
@@ -86,6 +88,7 @@ $hamburgerSize: 60px;
 .nav {
     display: flex;
     font-family: 'Jost';
+    margin-left: auto;
     @media  (max-width: $breakpoint-lg-min) {
         display: none;
     }
@@ -94,7 +97,7 @@ $hamburgerSize: 60px;
 
         .li_item {
             @include list-null();
-            font-size: 18px;
+            font-size: 16px;
             margin-left: 30px;
             
             font-weight: 300;
@@ -141,8 +144,6 @@ $hamburgerSize: 60px;
     display: flex;
     border-radius: 8px;
     justify-content: center;
-    display: none;
-    opacity: 0;
     div {
         display: flex;
         flex-direction: column;
@@ -234,10 +235,12 @@ $hamburgerSize: 60px;
     // backdrop-filter: blur(120px);
     @media  (max-width: $breakpoint-lg-min) {
         display: block;
+        top: 7px;
     }
     @media  (max-width: $breakpoint-md-min) {
         right: 20px;
-        top: 10px;
+        top: 2px;
+        
     }
     @media  (max-width: $breakpoint-sm-min) {
         right: 2px;
