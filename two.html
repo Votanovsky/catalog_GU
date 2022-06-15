@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
+<body x-data="{ open: false }">
     <header class="header header--main">
 
         <div class="logo">
@@ -225,7 +226,7 @@
                         </div>
                     </div>
 
-                    <div class="title--two">подобрать размер</div>
+                    <div x-on:click="open = true" class="title--two">подобрать размер</div>
 
                     <div class="btn-wrapper">
                         <button>
@@ -271,9 +272,9 @@
         </div>
     </section>
 
-    <div style="display: none;" class="sizes_overlay">
+    <div x-show="open" class="sizes_overlay">
         <div class="sizes_modal">
-            <div class="btn_close">
+            <div x-on:click="open = false" class="btn_close">
                 X
             </div>
             <div class="sizes_title">Подбор размера</div>

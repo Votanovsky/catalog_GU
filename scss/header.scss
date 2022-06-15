@@ -207,11 +207,11 @@ $hamburgerSize: 60px;
         text-decoration: underline;
     }
     
-    @for $i from 1 through 7 {
-        &:nth-child(#{$i}) {
-        transition-delay: $i * 0.2s;
-        }
-    }
+    // @for $i from 1 through 7 {
+    //     &:nth-child(#{$i}) {
+    //     transition-delay: $i * 0.2s;
+    //     }
+    // }
     
     &.active {
         opacity: 1;
