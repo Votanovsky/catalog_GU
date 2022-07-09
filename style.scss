@@ -26,7 +26,7 @@ $black-color: #1C1A1A;
 
 //modules
 @import 'scss/media.scss';
-@import 'scss/header.scss';
+
 @import 'scss/catalog.scss';
 @import 'scss/product.scss';
 
@@ -35,7 +35,7 @@ $black-color: #1C1A1A;
 @import 'scss/login.scss';
 @import 'scss/about.scss';
 @import 'scss/info.scss';
-
+@import 'scss/header_two.scss';
 * {
     margin: 0;
     padding: 0;
@@ -364,13 +364,12 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-track {
     background-color: rgb(247, 239, 239);
-    border-radius: 100px;
+    border-radius: 80px;
 }
 body::-webkit-scrollbar-thumb {
-    border-radius: 100px;
-    background: rgb(210,9,1);
-    background: linear-gradient(225.36deg, #D31217 33.32%, #F16C29 99.24%);
-    border: 2px solid #fff;
+    border-radius: 80px;
+    background: #fff;
+    border: 1px solid #000;
 }
 /* Selection text=============== */
 ::selection {
