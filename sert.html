@@ -19,7 +19,7 @@
                 Выбираете подарок? Дарите не вещи, а уверенность в себе и красоту - точно угадаете с размером.
             </h4>
 
-            <div class="buy_wrapper">
+            <div style="position: relative;" class="buy_wrapper">
                 <div class="choise">
                     Выбрать номинал:
                 </div>
@@ -33,6 +33,51 @@
                         <div></div>
                     </div>
                 </div>
+
+                <ul class="buy_wrapper-popup">
+                    <li>5 000 <span>₽</span></li>
+                    <li>10 000 <span>₽</span></li>
+                    <li>15 000 <span>₽</span></li>
+                    <li>20 000 <span>₽</span></li>
+                </ul>
+
+                <style>
+                    .buy_wrapper-popup {
+                        position: absolute;
+                        width: 220px;
+                        top: 110%;
+                        display: flex;
+                        background: #fff;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        z-index: 100;
+                        border: 1px solid #D31217;
+                        border-radius: 4px;
+                        padding: 10px 0 0;
+                        overflow: hidden;
+                        color: #1c1c1c;
+                    }
+                    .buy_wrapper-popup li {
+                        list-style-type: none;
+                        margin-bottom: 7px;
+                        font-size: 16px;
+                        width: 100%;
+                        cursor: pointer;
+                        padding: 0 10px;
+                        transition: .3s;
+                        border-bottom: 1px solid rgb(235, 235, 235);
+                    }
+                    .buy_wrapper-popup li:hover {
+                        background: #fdfdfd;
+                        transform: translateX(7px);
+                        transition: .3s;
+                        color: #2c2c2c;
+                    }
+                    .buy_wrapper-popup li:last-child {
+                        margin-bottom: 0;
+                        border-bottom: 0;
+                    }
+                </style>
             </div>
 
             <div class="btn-wrapper">
