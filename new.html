@@ -350,6 +350,100 @@
                 </div>
             </div>
         </footer>
+
+
+        <section class="cookie">
+            <div class="cookie_text"> 
+                <span>Мы используем файлы cookie!</span> <br> Это необходимо, чтобы Вы могли получить максимум пользы от нашего сайта.
+            </div>
+
+            <button class="cookie_btn">окей</button>
+
+            <img src="media/cookie.png" alt="">
+        </section>
+
+        <style>
+            .cookie {
+                position: fixed;
+                /* height: 80px; */
+                width: 40vw;
+                z-index: 100000;
+                font-size: 16px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                /* background: linear-gradient(225.36deg, #D31217 33.32%, #F16C29 99.24%); */
+                background: #1c1a1c;
+                color: #fff;
+                border: 2px solid #fff;
+                border-radius: 16px;
+                bottom: 3%;
+                left: 50%;
+                padding:10px 20px;
+                transform: translateX(-50%);
+            }
+            .cookie img {
+                position: absolute;
+                right: -10px;
+                bottom: -17px;
+                width: 70px;
+            }
+            .cookie_text span {
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+                opacity: .85;
+            }
+            .cookie_btn {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 110px;
+                height: 40px;
+                border-radius: 20px;
+                background: #fff;
+                color: #1C1A1A;
+                font-weight: bold;
+                text-transform: uppercase;
+                border: 2px solid #1c1a1c;
+                cursor: pointer;
+                transition: .3s;
+            }
+            .cookie_btn:hover {
+                background: #1c1a1c;
+                color: #fff;
+                border: 2px solid #fff;
+                transition: .3s;
+            }
+            @media  (max-width: 991px) {
+                .cookie {
+                    width: 70vw;
+                }
+            }
+            @media  (max-width: 776px) {
+                .cookie {
+                    width: 80vw;
+                }
+            }
+            @media  (max-width: 556px) {
+                .cookie {
+                    width: 95vw;
+                    font-size: 12px;
+                    bottom: 15px;
+                }
+                .cookie_btn {
+                    margin-top: 10px;
+                    width: 88px;
+                    height: 32px;
+                } 
+                .cookie img {
+                    width: 50px;
+                }
+            }
+        </style>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" integrity="sha512-6zTDRWNxo8vI6JZYDCwhrJpg5icK3P4HNnW3czsO5Scb3lAoPDam+/wF3eog4hxcl0h44d0XlIcFkuoSaWHQ2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
