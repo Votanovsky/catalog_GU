@@ -228,9 +228,9 @@
         // border-bottom: 2px solid rgb(200, 200, 200);
         .scroll_track {
             width: 400px;
-            height: 6px;
+            height: 5px;
             border-radius: 4px;
-            background: rgb(200, 200, 200);
+            background: rgb(244, 244, 244);
             position: absolute;
             bottom: 0;
             left: 0;
@@ -239,16 +239,16 @@
         // &::-webkit-scrollbar {
         //     height: 14px;
         // }
-        // &::-webkit-scrollbar-track {
-        //     background-color: rgb(252, 252, 252);
-        //     border-radius: 80px;
-        // }
-        // &::-webkit-scrollbar-thumb {
-        //     border-radius: 80px;
-        //     background: rgb(200, 200, 200);
-        //     width: 140px;
-        //     // border: 1px solid #000;
-        // }
+        &::-webkit-scrollbar-track {
+            background-color: rgb(254, 254, 254);
+            border-radius: 80px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 80px;
+            background: rgb(244, 244, 244);
+            width: 140px;
+            // border: 1px solid #000;
+        }
         li {
             list-style-type: none;
             margin-right: 80px;
