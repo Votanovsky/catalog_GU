@@ -224,20 +224,31 @@
         display: flex;
         white-space: nowrap;
         overflow-x: scroll;
-        border-bottom: 2px solid rgb(200, 200, 200);
-        &::-webkit-scrollbar {
-            height: 14px;
-        }
-        &::-webkit-scrollbar-track {
-            background-color: rgb(252, 252, 252);
-            border-radius: 80px;
-        }
-        &::-webkit-scrollbar-thumb {
-            border-radius: 80px;
+        position: relative;
+        // border-bottom: 2px solid rgb(200, 200, 200);
+        .scroll_track {
+            width: 400px;
+            height: 6px;
+            border-radius: 4px;
             background: rgb(200, 200, 200);
-            width: 140px;
-            // border: 1px solid #000;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
+        // &::-webkit-scrollbar {
+        //     height: 14px;
+        // }
+        // &::-webkit-scrollbar-track {
+        //     background-color: rgb(252, 252, 252);
+        //     border-radius: 80px;
+        // }
+        // &::-webkit-scrollbar-thumb {
+        //     border-radius: 80px;
+        //     background: rgb(200, 200, 200);
+        //     width: 140px;
+        //     // border: 1px solid #000;
+        // }
         li {
             list-style-type: none;
             margin-right: 80px;
