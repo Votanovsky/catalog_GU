@@ -1,0 +1,149 @@
+
+.new-catalog {
+    &_parent {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    &_wrapper {
+        margin-right: -1px;
+        width: calc(100% + 1px);
+        border-top: 1px solid #1C1A1A;
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @media  (max-width: $breakpoint-md-min) {
+            margin-top: 50px;
+        }
+    }
+    &_item {
+        width: 25%;
+        flex-shrink: 0;
+        border: 0 solid #1C1A1A;
+        border-width: 0 1px 1px 0;
+        overflow: hidden;
+        position: relative;
+        @media  (max-width: $breakpoint-lg-min) {
+            width: 50%;
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            height: 320px;
+        }
+        a {
+            height: 384px;
+            
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+    
+            }
+        }
+        &:hover .title {
+            transform: translateY(0);
+            -webkit-transition: all 0.3s cubic-bezier(0.02, 0.27, .58, 1);
+            transition: all 0.3s cubic-bezier(0.02, 0.27, .58, 1);
+            // transition: opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+        }
+        .title {
+            transform: translateY(62px);
+            -webkit-transition: all 0.3s cubic-bezier(0.02, 0.27, .58, 1);
+            transition: all 0.3s cubic-bezier(0.02, 0.27, .58, 1);
+            // transition: opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+            align-items: flex-start;
+            justify-content: space-between;
+            font-size: 14px;
+            // text-transform: uppercase;
+            font-weight: 100;
+            line-height: inherit;
+            // border-top: 1px solid #1C1A1A;
+            padding: 10px 0;
+            background: #fff;
+            @media  (max-width: $breakpoint-lg-min) {
+                transform: translateY(0);
+            }
+            @media  (max-width: $breakpoint-sm-min) {
+                padding: 7px 0;
+                font-size: 12px;
+                flex-direction: column;
+            }
+            .name {
+                padding-left: 15px;
+                width: 80%;
+                height: 42px;
+                @media  (max-width: $breakpoint-sm-min) {
+                    height: 18px;
+                    overflow: hidden;
+                    white-space:nowrap;
+                    text-overflow: ellipsis;
+                    padding: 0 10px;
+                    width: 180px;
+                }
+                
+            }
+            .price {
+                padding-right: 15px;
+                opacity: .75;
+                @media  (max-width: $breakpoint-sm-min) {
+                    padding-left: 10px;
+                    padding-right: 0;
+                    font-size: 10px;
+                    width: 100%;
+                }
+            }
+        }
+        .inf {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 10px;
+            @media  (max-width: $breakpoint-sm-min) {
+                padding-top: 7px;
+            }
+            .status {
+                padding-left: 15px;
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 100;
+                @media  (max-width: $breakpoint-sm-min) {
+                    font-size: 12px;
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    padding-left: 10px;
+                }
+            }
+            .colors {
+                padding-right: 15px;
+                display: flex;
+                @media  (max-width: $breakpoint-sm-min) {
+                    padding-right: 10px;
+                }
+                div {
+                    width: 8px;
+                    height: 8px;
+                    margin-right: 8px;
+                    border-radius: 100%;
+                    opacity: .75;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        width: 6px;
+                        height: 6px;
+                        margin-right: 6px;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,178 @@
+.sizes {
+    &_root {
+        font-family: 'Jost';
+        font-weight: 100;
+        font-size: 14px;
+        width: 100%;
+        // height: 100vh;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media  (max-width: $breakpoint-xxl-min) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        @media  (max-width: $breakpoint-md-min) {
+            font-size: 12px;
+        }
+        @media  (max-width: 550px) {
+            font-size: 10px;
+        }
+        .img {
+            margin-left: 60px;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            @media  (max-width: $breakpoint-xxl-min) {
+                margin-left: 0;
+            }
+            @media  (max-width: 550px) {
+                flex-direction: column;
+            }
+            img {
+                height: 500px;
+                object-fit: contain;
+            }
+            .text {
+                display: flex;
+                flex-direction: column;
+                width: 350px;
+                .p {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 40px;
+                    align-items: flex-start;
+                    .c-wr {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 7px;
+                    }
+                    .circle {
+                        width: 23px;
+                        height: 23px;
+                        background: #303030;
+                        border-radius: 100%;
+                        color: #fff;
+                        margin-right: 10px;
+                        display: flex;
+                        justify-content: center; 
+                        align-items: center;
+                        // margin-bottom: 10px;
+                    }
+                    p {
+                        padding-left: 33px;
+                    }
+                }
+            }
+        }
+    }
+    &_wrapper {
+        width: 650px;
+        display: flex;
+        flex-direction: column;
+        // border: 1px solid #000;
+        border: 1px solid #dadada;
+        margin-bottom: 60px;
+        @media  (max-width: $breakpoint-md-min) {
+            width: 540px;
+            margin-bottom: 40px;
+        }
+        @media  (max-width: 550px) {
+            width: 420px;
+        }
+        @media  (max-width: 440px) {
+            width: 360px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+            @media  (max-width: $breakpoint-md-min) {
+                margin-bottom: 40px;
+            }
+        }
+        
+    }
+    &_row {
+        // border-bottom: 1px solid #dadada;
+        display: flex;
+        width: 100%;
+        &:first-child div{
+            background: #303030;
+            color: #fff;
+            cursor: default;
+        }
+        &--bra {
+            &:first-child div {
+                &:last-child {
+                    &:hover {
+                        background: #303030;
+                        color: #fff;
+                    }
+                }
+            }
+            &:last-child div {
+                &:hover {
+                    background: #303030;
+                    color: #fff;
+                }
+            }
+            &:last-child div {
+                &:last-child {
+                    &:hover {
+                        cursor: cell;
+                    }
+                }
+            }
+            &:nth-child(2) div {
+                &:nth-last-child(-n+2)  {
+                    cursor: default;
+                    background: #fff;
+                }
+            }
+        }
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            height: 40px;
+            @media  (max-width: $breakpoint-md-min) {
+                &:first-child {
+                    width: 25%;
+                }
+                width: 20%;
+            }
+            &--bra {
+                width: 14.2857%;
+                @media  (max-width: $breakpoint-md-min) {
+                    &:first-child {
+                        width: 20%;
+                    }
+                    width: 14.2857%;
+                }
+                &:hover {
+                    &:last-child {
+                        background: #fff;
+                        cursor: default;
+                    }
+                }
+            }
+            &:first-child {
+                background: #303030;
+                color: #fff;
+            }
+            &:hover {
+                background: #303030;
+                color: #fff;
+                cursor: cell;
+                &:first-child {
+                    background: #303030;
+                    color: #fff;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}

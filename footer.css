@@ -1,0 +1,160 @@
+.footer_index {
+    background: #F8F8F8;
+    padding: 80px 50px 30px;
+  }
+  @media (max-width: 1200px) {
+    .footer_index {
+      padding: 80px 20px 30px;
+    }
+  }
+  .footer_index .foot {
+    padding-top: 20px;
+    border-top: 1px solid #1C1A1A;
+    display: flex;
+  }
+  @media (max-width: 768px) {
+    .footer_index .foot {
+      flex-direction: column;
+    }
+  }
+  .footer_index .foot_data {
+    margin-left: 60px;
+    padding-top: 15px;
+    display: flex;
+  }
+  @media (max-width: 1400px) {
+    .footer_index .foot_data {
+      margin-left: 30px;
+      flex-wrap: wrap;
+    }
+  }
+  @media (max-width: 768px) {
+    .footer_index .foot_data {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  }
+  .footer_index .foot_data .cl-1 {
+    margin-right: 60px;
+  }
+  @media (max-width: 1400px) {
+    .footer_index .foot_data .cl-1 {
+      margin-right: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    .footer_index .foot_data .cl-1 {
+      margin-bottom: 40px;
+    }
+  }
+  @media (max-width: 576px) {
+    .footer_index .foot_data .cl-1 {
+      margin-right: 30px;
+    }
+  }
+  @media (max-width: 420px) {
+    .footer_index .foot_data .cl-1 {
+      margin-right: 70px;
+      font-size: 14px;
+    }
+  }
+  .footer_index .foot_data .cl-1_mob {
+    display: none;
+    margin-right: 0;
+  }
+  @media (max-width: 992px) {
+    .footer_index .foot_data .cl-1_mob {
+      display: block;
+    }
+  }
+  .footer_index .foot_data .cl-1 a {
+    display: block;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  .footer_index .foot_data .cl-1 a:last-child {
+    margin-bottom: 0;
+  }
+  @media (max-width: 992px) {
+    .footer_index .foot_data .cl-1 .cl-1_non {
+      display: none;
+    }
+  }
+  .footer_index .foot_data .cl-2 {
+    font-weight: 300;
+    color: #1C1A1A;
+    width: 425px;
+    margin-left: 180px;
+  }
+  @media (max-width: 1400px) {
+    .footer_index .foot_data .cl-2 {
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 1200px) {
+    .footer_index .foot_data .cl-2 {
+      width: 300px;
+    }
+  }
+  @media (max-width: 992px) {
+    .footer_index .foot_data .cl-2 {
+      width: 520px;
+      margin-top: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    .footer_index .foot_data .cl-2 {
+      width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    .footer_index .foot_data .cl-2 {
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  }
+  .footer_index .foot_data .cl-2 input {
+    margin-top: 35px;
+    font-size: 18px;
+    background: transparent;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid #1C1A1A;
+    width: 100%;
+    outline: none;
+    opacity: .5;
+    position: relative;
+  }
+  .footer_index .foot_data .cl-2 div {
+    position: relative;
+  }
+  
+  .footer_index .foot_data .cl-2 div button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 18px;
+    opacity: .8;
+    border: 1px solid #1C1A1A;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 5px 2px;
+    border-bottom: 0 solid #000;
+    cursor: pointer;
+  }
+  .footer_index .foot_data .cl-2 div button:hover{
+    opacity: .5;
+  }
+  .footer_index .foot_data .cl-2 div button:active{
+    opacity: .5;
+  }
+  
+  @media (max-width: 420px) {
+    .footer_index .foot_data .cl-2 input {
+      font-size: 14px;
+    }
+
+    .footer_index .foot_data .cl-2 div button{
+        font-size: 14px;
+    }
+  }

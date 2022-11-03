@@ -1,0 +1,108 @@
+.sizes_root {
+  font-family: "Jost";
+  font-weight: 100;
+  padding: 60px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.sizes_root .img {
+  margin-left: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.sizes_root .img img {
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.sizes_root .img .text {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  width: 350px;
+}
+.sizes_root .img .text .p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+.sizes_root .img .text .p .c-wr {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.sizes_root .img .text .p .circle {
+  width: 23px;
+  height: 23px;
+  background: #000;
+  border-radius: 100%;
+  color: #fff;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sizes_root .img .text .p p {
+  padding-left: 33px;
+}
+.sizes_wrapper {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dadada;
+  margin-bottom: 60px;
+}
+.sizes_wrapper:last-child {
+  margin-bottom: 0;
+}
+.sizes_row {
+  display: flex;
+}
+.sizes_row:first-child div {
+  background: #ebebeb;
+  cursor: default;
+}
+.sizes_row--bra:first-child div:last-child:hover {
+  background: #ebebeb;
+}
+.sizes_row--bra:last-child div:hover {
+  background: #ebebeb;
+}
+.sizes_row--bra:last-child div:last-child:hover {
+  cursor: cell;
+}
+.sizes_row--bra:nth-child(2) div:nth-last-child(-n+2) {
+  cursor: default;
+  background: #fff;
+}
+.sizes_row-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 40px;
+  font-size: 14px;
+}
+.sizes_row-item--bra {
+  width: 14.2857%;
+}
+.sizes_row-item--bra:hover:last-child {
+  background: #fff;
+  cursor: default;
+}
+.sizes_row-item:first-child {
+  background: #ebebeb;
+}
+.sizes_row-item:hover {
+  background: #ebebeb;
+  cursor: cell;
+}
+.sizes_row-item:hover:first-child {
+  background: #ebebeb;
+  cursor: default;
+}/*# sourceMappingURL=sizes.min.css.map */

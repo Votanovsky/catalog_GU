@@ -1,0 +1,117 @@
+// =================== NEW INDEX STYLE ==================
+
+#root-index {
+    background: #F8F8F8;
+    font-family: 'Inter', sans-serif;
+}
+/* header */
+.header {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    padding: 20px 50px;
+    display: flex;
+    /* align-items: center; */
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.005em;
+    position: fixed;
+    width: 100%;
+}
+.logo svg path {
+    fill: $black-color;
+}
+.nav {
+    display: flex;
+    margin-left: auto;
+    align-items: flex-start;
+    padding-top: 24px;
+}
+a {
+    color: $black-color;
+    text-decoration: none;
+}
+ul li {
+    list-style-type: none;
+}
+.men {
+    margin-right: 190px;
+}
+.p_1 {
+    margin-right: 68px;
+}
+.p_2 {
+    margin-right: 220px;
+}
+.prom a {
+    display: block;
+}
+/* header */
+
+
+.section {
+    padding: 200px 50px 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.h1 {
+    font-weight: 400;
+    font-size: 82px;
+    letter-spacing: -0.05em;
+    color: $black-color;
+}
+.h1 div {
+    transform: translate(400px, -30px);
+}
+.arr {
+    position: absolute;
+    left: 50px;
+    bottom: 7px;
+    display: flex;
+    font-weight: 300;
+    text-transform: uppercase;
+    align-items: center;
+}
+.arr img{
+    margin-left: 10px;
+}
+.section_two {
+    min-height: 100vh;
+    padding: 280px 50px 200px;
+}
+.tt {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 30;
+    text-align: right;
+
+}
+.section_two .text {
+    width: 360px;
+    margin-left: 120px;
+    margin-top: 20px;
+    font-weight: 300;
+}
+.section_two .text div {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 36px;
+    letter-spacing: -0.05em;
+    margin-bottom: 25px;
+}
+.section_two .text p {
+    margin-bottom: 10px;
+}
+.arr_two {
+    display: flex;
+    font-weight: 300;
+    text-transform: uppercase;
+    align-items: center;
+}
+.arr_two img{
+    margin-left: 10px;
+}

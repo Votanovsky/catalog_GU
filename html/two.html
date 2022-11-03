@@ -35,15 +35,45 @@
 
 
             
-            <div class="product_img">
+            <div class="product_img" 
+            
+            >
+
+                <div class="overlay_lightbox"
+                    style="z-index:10000; width: 100%; background: #1c1c1cda; position: fixed; top: 0; left: 0; height: 100vh; display: none; justify-content: center; align-items:center; padding: 20px;"
+                    
+                >
+                    <img style="max-height: 90vh; object-fit:contain;" alt=""
+                    class="data-lightbox-img_get"
+                    >
+                </div>
+
                 <div class="tab pageNav__tabItem">
                     <img onclick="next(this)" class="tab_i" src="media/one.png" alt="">
                     <img onclick="next(this)" class="tab_i" src="media/DSC01644.jpg" alt="">
                     <img onclick="next(this)" class="tab_i" src="media/DSC01722.jpg" alt="">
                 </div>
                 <div class="img_wrapper">
-                    <img id="pic" class="img_mein" src="media/IMG_9984.png" alt="">
+                    <img id="pic"  class="img_mein data-lightbox-img" src="media/IMG_9984.png" alt="">
                 </div>
+                
+                <style>
+                    .flex {
+                        display: flex;
+                    }
+                </style>
+
+                <script>
+                    const lightbox = document.querySelector('.overlay_lightbox')
+                    const lightbox_img = document.querySelector('.data-lightbox-img')
+                    const lightbox_img_get = document.querySelector('.data-lightbox-img_get')
+
+                    lightbox_img.onclick = ()=> {
+                        lightbox.style.display = 'flex'
+                        lightbox_img_get.src = lightbox_img.src
+                    }
+                </script>
+
             </div>
             <div class="product_buy">
                 <h3 class="name">Боди прозрачное с фигурной вставкой</h3>
@@ -183,7 +213,7 @@
         </div>
     </div> -->
 
-    <div  class="sizes_overlay">
+    <div style="display: none;" class="sizes_overlay">
         <div class="sizes_modal">
             <div class="sizes_modal-wrap">
                 <div class="sizes_modal-left">
