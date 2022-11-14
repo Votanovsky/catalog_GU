@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+</head>
+<body>
+    <div 
+    x-data="{ selectedCountry: null, countries: [ 'Mexico', 'USA', 'Canada' ],  stores: [ { 'store' : 'data' } ] }"
+    x-init="$watch('selectedCountry', (country) => { fetch('url?country=" + country).then(res=> res.json()).then((storeData) => { stores = storeData }) })"
+  >
+    <select x-model="selectedCountry">
+      <template x-for="country in countries" :key="country">
+        <option :value="country" x-text="country"></option>
+      </template>
+    </select>
+    Stores:
+    <template x-for="store in stores" :key="store.id">
+  
+    </template>
+  </div>
+
+    <script>
+        // console.log(alpine);
+    </script>
+</body>
+</html>

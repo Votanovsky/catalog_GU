@@ -1087,21 +1087,16 @@ body::-webkit-scrollbar-thumb {
 
 // =========================== NEW PRODUCT
 // =========================== NEW PRODUCT
-.hdr {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    background: rgb(244, 244, 244);
-    border-bottom: 1px solid rgb(227, 227, 227);
-    font-size: 36px;
-    z-index: 2000;
-    height: 80px;
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+    color: rgb(206, 206, 206);
     @media  (max-width: $breakpoint-md-min) {
-        height: 60px;
+        display: block;
     }
 }
+
 .swiper-button-next,
 .swiper-button-prev {
     transform: scale(.4);
@@ -1113,12 +1108,7 @@ body::-webkit-scrollbar-thumb {
 .swiper-button-prev {
     left: 0 !important;
 }
-.swiper-button-next::after, 
-.swiper-button-prev::after {
-    color: rgb(206, 206, 206);
-    // height: 20px;
-    // width: 20px;
-}
+
 .product_wr {
     padding: 80px 50px 20px;
     display: flex;
@@ -1233,10 +1223,10 @@ body::-webkit-scrollbar-thumb {
                 // min-height: 100vh;
                 height: 110vh;
                 @media  (max-width: $breakpoint-xl-min) {
-                    height: 70vh;
+                    height: 100vh;
                 }
                 @media  (max-width: $breakpoint-lg-min) {
-                    height: 60vh;
+                    height: 90vh;
                 }
                 @media  (max-width: $breakpoint-md-min) {
                     height: 120vh;
@@ -1361,12 +1351,14 @@ body::-webkit-scrollbar-thumb {
                         opacity: .8;
                         border: 1px solid transparent;
                         
+                        transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                         &:hover {
                             cursor: pointer;
-                            border: 1px solid #1C1A1A;
+                            border: 1px solid #a6a6a6;
+                            transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                         }
                         &--active {
-                            border: 1px solid #1C1A1A;
+                            border: 1px solid #a6a6a6;
                             cursor: default;
                         }
                         &:nth-child(1) {
@@ -1404,7 +1396,7 @@ body::-webkit-scrollbar-thumb {
                             padding: 5px 10px;
                             // border-radius: 2px;
                             cursor: pointer;
-                            border: 1px solid #1C1A1A;
+                            // border: 1px solid #1C1A1A;
     
     
                             // &::before {
@@ -1419,7 +1411,7 @@ body::-webkit-scrollbar-thumb {
                             //     transition: .3s;
                             // }
                             &:hover {
-                                border: 1px solid #1C1A1A;
+                                // border: 1px solid #1C1A1A;
                                 background: #1C1A1A;
                                 color: #fff;
                                 
@@ -1466,23 +1458,37 @@ body::-webkit-scrollbar-thumb {
                     display: flex;
                     height: 51px;
                     font-size: 18px;
-                    margin-bottom: 70px;
+                    margin-bottom: 16px;
                     @media  (max-width: $breakpoint-sm-min) {
                         margin-bottom: 50px;
                     }
                     .cart {
-                        width: 219px;
+                        width: 240px;
                         border: 1px solid #1C1A1A;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
                         padding: 0 10px;
                         cursor: pointer;
-                        margin-right: 20px;
+                        margin-right: 10px;
+
+                        &--active {
+                            background: #1C1A1A;
+                            color: #fff;
+
+                            svg {
+                                path {
+                                    fill: #fff;
+                                }
+                            }
+                        }
+
                         svg {
                             width: 20px;
                             height: 19px;
                         }
+
+                        
                     }
                     .fav {
                         height: 51px;
@@ -1492,10 +1498,36 @@ body::-webkit-scrollbar-thumb {
                         align-items: center;
                         justify-content: center;
                         cursor: pointer;
+
+                        &--active {
+                            background: #1C1A1A;
+                            color: #fff;
+
+                            svg {
+                                path {
+                                    fill: #fff;
+                                }
+                            }
+                        }
+
                         svg {
                             width: 20px;
                             height: 18px;
                         }
+                    }
+                }
+
+                .alert {
+                    opacity: 0;
+                    text-transform: lowercase;
+                    color: #921315;
+                    margin-bottom: 60px;
+                    max-width: 290px;
+                    min-height: 20px;
+                    transition: .3s;
+                    &--active {
+                        transition: .4s;
+                        opacity: 1;
                     }
                 }
     
