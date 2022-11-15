@@ -1,0 +1,154 @@
+.callback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding: 110px 50px 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: #1C1A1A;
+    line-height: 105%;
+  }
+  @media (max-width: 768px) {
+    .callback {
+      padding: 100px 20px 20px;
+    }
+  }
+  .callback_message {
+    font-size: 32px;
+    width: 35%;
+    line-height: 94%;
+    letter-spacing: -0.035em;
+  }
+  .callback_message p {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  .callback_message--success {
+    line-height: 105%;
+    width: 50%;
+  }
+  .callback_message--success p {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .callback_message--success .descr {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .callback_message--success .descr {
+      display: inline;
+      text-align: center;
+      font-size: 16px;
+      opacity: 0.5;
+    }
+  }
+  @media (max-width: 992px) {
+    .callback_message {
+      width: 80%;
+    }
+  }
+  @media (max-width: 768px) {
+    .callback_message {
+      width: 100%;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+    .callback_message {
+      font-size: 18px;
+    }
+  }
+  .callback_logo {
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .callback_logo {
+      max-width: 350px;
+    }
+  }
+  @media (max-width: 576px) {
+    .callback_logo {
+      max-width: 320px;
+    }
+  }
+  .callback_logo img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .callback_unr {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    align-items: flex-end;
+  }
+  @media (max-width: 768px) {
+    .callback_unr {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .callback_unr .descr {
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+  @media (max-width: 768px) {
+    .callback_unr .descr {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+  }
+  .callback_unr .descr--success {
+    width: 45%;
+    margin-bottom: 0;
+  }
+  @media (max-width: 768px) {
+    .callback_unr .descr--success {
+      display: none;
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+  }
+  .callback_unr button {
+    width: 220px;
+    height: 50px;
+    outline: none;
+    border: 1px solid #1C1A1A;
+    background: #fff;
+    color: #1C1A1A;
+    transition: 0.4s;
+  }
+  .callback_unr button:hover {
+    transition: 0.4s;
+    cursor: pointer;
+    border: 1px solid #fff;
+    background: #1C1A1A;
+    color: #fff;
+  }
+  @media (max-width: 768px) {
+    .callback_unr button {
+      margin-bottom: 150px;
+    }
+  }
+  @media (max-width: 768px) {
+    .callback_unr .soc {
+      margin-left: auto;
+      font-size: 16px;
+    }
+  }
+  .callback_unr .soc a {
+    display: block;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  .callback_unr .soc a:last-child {
+    margin-bottom: 0;
+  }
+  .callback_unr .soc a:hover {
+    opacity: 0.8;
+  }
