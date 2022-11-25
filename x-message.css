@@ -16,22 +16,20 @@
     }
   }
   .callback_message {
-    font-size: 32px;
+    font-size: 18px;
     width: 35%;
     line-height: 94%;
     letter-spacing: -0.035em;
   }
   .callback_message p {
-    margin-bottom: 5px;
-    text-transform: uppercase;
+    margin-bottom: 15px;
   }
   .callback_message--success {
     line-height: 105%;
     width: 50%;
   }
   .callback_message--success p {
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    /* margin-bottom: 10px; */
   }
   .callback_message--success .descr {
     display: none;
@@ -40,7 +38,7 @@
     .callback_message--success .descr {
       display: inline;
       text-align: center;
-      font-size: 16px;
+      font-size: 14px;
       opacity: 0.5;
     }
   }
@@ -83,7 +81,7 @@
   .callback_unr {
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 14px;
     align-items: flex-end;
   }
   @media (max-width: 768px) {
@@ -99,19 +97,20 @@
   @media (max-width: 768px) {
     .callback_unr .descr {
       text-align: center;
-      font-size: 16px;
+      font-size: 14px;
       margin-bottom: 7px;
     }
   }
   .callback_unr .descr--success {
     width: 45%;
     margin-bottom: 0;
+    
   }
   @media (max-width: 768px) {
     .callback_unr .descr--success {
       display: none;
       margin-bottom: 0;
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   .callback_unr button {
@@ -132,13 +131,16 @@
   }
   @media (max-width: 768px) {
     .callback_unr button {
-      margin-bottom: 150px;
+      margin-bottom: 300px;
     }
   }
   @media (max-width: 768px) {
     .callback_unr .soc {
       margin-left: auto;
       font-size: 16px;
+    }
+    .callback_logo {
+      display: none;
     }
   }
   .callback_unr .soc a {

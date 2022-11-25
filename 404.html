@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+    
+    <!-- сюда добавляем хедр -->
+
+    <div class="wr_404">
+        <div class="wr_404-img">
+            <div class="t-l">404</div>
+            <div class="im">
+                <img src="amain_media/404.jpg" alt="">
+            </div>
+        </div>
+        <div class="t-s">Страница не найдена <a href="#">geishaunder.com</a></div>
+    </div>
+
+    <style>
+        .wr_404 {
+            height: 100vh;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            flex-direction: column;
+            color: #9E2210;
+        }
+        .wr_404 .wr_404-img {
+            width: 50%;
+            height: auto;
+            position: relative;
+        }
+        .wr_404 .wr_404-img .im img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .wr_404 .wr_404-img .t-l {
+            font-size: 92px;
+            letter-spacing: -0.05em;
+            position: absolute;
+            right: -78px;
+            top: -50px;
+            line-height: 100%;
+            
+        }
+        .wr_404 .t-s {
+            position: static;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            /* line-height: 100%; */
+            margin-top: 7px;
+        }
+        .wr_404 .t-s a {
+            padding-top: 7px;
+            display: block;
+            color: #9E2210;
+        }
+        @media  (max-width: 768px) {
+            .wr_404 .wr_404-img .t-l {
+                position: static;
+                font-size: 72px;
+                text-align: center;
+            }
+            .wr_404 .wr_404-img {
+                width: 90%;
+                /* height: 300px; */
+            }
+            .wr_404 .wr_404-img img {
+                object-fit: contain;
+            }
+            .wr_404 .t-s {
+                font-size: 12px;
+            }
+        }
+    </style>
+
+</body>
+</html>
